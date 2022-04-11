@@ -42,6 +42,7 @@ console.log(arrObj[1].nome);
 
 //Declaração de Funções
 
+let infoTela = document.querySelector("#infoTela");
 let arrUsers = new Array
 
 function cadastro() {
@@ -51,4 +52,14 @@ function cadastro() {
         arrUsers.push({name, age});
 
         console.log(arrUsers);
+
+        apresentar();
 }
+
+//Criar um loop para aoresentar todos os usuários cadastrados, que se atualiza a cada novo cadastro;
+/*function apresentar(){
+
+        for(let i = 0; i < arrUsers.length; i++){
+                infoTela.innerHTML += `<p>${arrUsers[i].name} tem ${arrUsers[i].age} anos</p>`;
+        }
+}*/

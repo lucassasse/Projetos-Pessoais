@@ -37,7 +37,7 @@ console.log(arr6); //Retorno = [1, 5, 10, "palavra", true] - Cria uma cópia do 
 //concat() = Retorna um novo array, com os elementos do array passado como parâmetro concatenados com os elementos do array passado como parâmetro.
 
 let arr7 = [1, 5, 10, "palavra", true];
-let arr8 = arr7.slice[1,3];
+let arr8 = arr7.slice(1,3);
 console.log(arr8); //Retorno = [5, 10]
 
 //push() = Adiciona um ou mais elementos no final do array.
@@ -47,7 +47,23 @@ console.log(arr8); //Retorno = [5, 10]
 //splice() = Remove um ou mais elementos do array, a partir de um índice.
 //slice() = Retorna um novo array, com os elementos do array passado como parâmetro, a partir de um índice.
 
+let arr9 = [1, 5, 10, 25];
+let soma = arr9.reduce(function(acumulador, atual){
+  return acumulador + atual;
+})
+console.log(soma); //Retorno = 41
 
+let arr10 = [1, 5, 10, 25, 7, 1, 25, 7, 4, 4];
+let numerosUnicos = arr10.reduce(function(numeros, numeroAtual){
+  if(!numeros.includes(numeroAtual)){
+    numeros.push(numeroAtual);
+  }
+  return numeros;
+}, []);
+console.log(numerosUnicos); //Retorno = [1, 5, 10, 25, 7, 4]
 
 //reverse() = Inverte a ordem dos elementos do array.
 //reduce() = Retorna um novo valor, a partir dos elementos do array passado como parâmetro, aplicando uma função.
+
+//from() = Retorna um novo array, com os elementos do array passado como parâmetro, aplicados a uma função.
+//of() = Retorna um novo array, com os elementos passados como parâmetro.

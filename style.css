@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  margin: 0.5rem;
+}
+
+#infoPersonagem {
+  box-shadow: inset 0px 18px 5px -3px #ffffff;
+  background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+  background-color: #ededed;
+  border-radius: 2px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  color: #434343;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 20px 5px 10px;
+}
+
+select {
+  box-shadow: inset 0px 18px 5px -3px #ffffff;
+  background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+  background-color: #ededed;
+  border-radius: 2px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #434343;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 20px 5px 10px;
+}
+
+.myButton {
+  box-shadow: inset 0px 18px 5px -3px #ffffff;
+  background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+  background-color: #ededed;
+  border-radius: 2px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #434343;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 20px;
+}
+.myButton:hover {
+  background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+  background-color: #dfdfdf;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}

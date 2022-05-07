@@ -5,16 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teste de Lógica</title>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
+    <div id="infoPersonagem">
+      <p id="nome">Nome:</p>
+      <p id="forca">Força: 10</p>
+      <p id="agilidade">Vida: 100%</p>
+      <p id="energia">Energia: 80%</p>
+      <p id="dinheiro">Dinheiro: R$ 0,00</p>
+    </div>
+
     <div>
-      <select id="tarefa">
-        <option value="0">Selecione uma tarefa</option>
-        <option value="1">Roubar uma Idosa</option>
-        <option value="2">Roubar um Carro</option>
-        <option value="3">Roubar uma Casa</option>
+      <select name="tarefas" id="tarefa">
+        <option value="0">Tarefas:</option>
+        <option id="atv1" value="1"></option>
+        <option id="atv2" value="2"></option>
+        <option id="atv3" value="3"></option>
       </select>
-      <button id="btn" onclick="Realizar()">Realizar</button>
+      <button id="btnRealizar" class="myButton" onclick="Realizar()">
+        Realizar
+      </button>
+    </div>
+
+    <div>
+      <select name="loja" id="loja">
+        <option value="0">Loja:</option>
+        <option id="item1" value="1">
+          Soco Inglês - Valor: R$ 10,00 | Força + 2
+        </option>
+        <option id="item2" value="2">
+          Faca - Valor: R$ 25,00 | Força + 10
+        </option>
+        <option id="item3" value="3">
+          Pistola - Valor: R$ 100,00 | Força + 50
+        </option>
+      </select>
+      <button id="btnComprar" class="myButton" onclick="Comprar()">
+        Comprar
+      </button>
+    </div>
+
+    <div>
+      <select name="cidade" id="cidade">
+        <option value="0">Descanso:</option>
+        <option id="item1" value="1">Rua - Valor: R$ 0,00 | Risco - 50%</option>
+        <option id="item2" value="2">
+          Estábulo - Valor: R$ 5,00 | Risco - 25%
+        </option>
+        <option id="item3" value="3">
+          Hotel - Valor R$ 25,00 | Risco - 10%
+        </option>
+      </select>
+      <button id="btnDescansar" class="myButton" onclick="Comprar()">
+        Descansar
+      </button>
     </div>
   </body>
   <script src="index.js"></script>

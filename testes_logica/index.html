@@ -41,7 +41,23 @@
           Pistola - Valor: R$ 100,00 | Força + 50
         </option>
       </select>
-      <button id="btnComprar" class="myButton" onclick="comprar()">
+      <button id="btnComprar" class="myButton" onclick="comprarDaLoja()">
+        Comprar
+      </button>
+    </div>
+
+    <div>
+      <select name="mercearia" id="mercearia">
+        <option value="0">Mercearia:</option>
+        <option id="item1" value="1">Pão - Valor: R$ 10,00 | Vida + 5</option>
+        <option id="item2" value="2">
+          Bolinho - Valor: R$ 15,00 | Vida + 10
+        </option>
+        <option id="item3" value="3">
+          Baião de dois - Valor: R$ 25,00 | Vida + 25
+        </option>
+      </select>
+      <button id="btnComprar" class="myButton" onclick="comprarDaMercearia()">
         Comprar
       </button>
     </div>
@@ -49,13 +65,11 @@
     <div>
       <select name="cidade" id="descanso">
         <option value="0">Descanso:</option>
-        <option id="item1" value="1">Rua - Valor: R$ 0,00 | Risco - 50%</option>
+        <option id="item1" value="1">Rua - Valor: R$ 0,00 | Vida: -40</option>
         <option id="item2" value="2">
-          Estábulo - Valor: R$ 5,00 | Risco - 25%
+          Estábulo - Valor: R$ 50,00 | Vida: -15
         </option>
-        <option id="item3" value="3">
-          Hotel - Valor R$ 25,00 | Risco - 10%
-        </option>
+        <option id="item3" value="3">Hotel - Valor R$ 150,00 | Vida: -0</option>
       </select>
       <button id="btnDescansar" class="myButton" onclick="descansar()">
         Descansar

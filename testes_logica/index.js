@@ -8,11 +8,11 @@ let energia = document.getElementById('energia')
 let dinheiro = document.getElementById('dinheiro')
 
 var personagem = {
-  //nome: prompt('Digite o nome do seu personagem: '),
+  nome: prompt('Digite o nome do seu personagem: '),
   forca: 10,
   vida: 100,
   energia: 100,
-  dinheiro: 0
+  dinheiro: 1000
 }
 
 let desafios = [
@@ -33,11 +33,29 @@ let desafios = [
   }
 ]
 
+let mercearia = [
+  {
+    nome: 'Pão seco',
+    valor: 10,
+    vidaAdd: 5
+  },
+  {
+    nome: 'Bolinho',
+    valor: 15,
+    vidaAdd: 10
+  },
+  {
+    nome: 'Baião de dois',
+    vidaAdd: 25,
+    valor: 25
+  }
+]
+
 let loja = [
   {
     nome: 'Soco Inglês',
-    valor: 10,
-    forcaAdd: 2
+    forcaAdd: 2,
+    valor: 10
   },
   {
     nome: 'Faca',
@@ -55,17 +73,17 @@ let descanso = [
   {
     nome: 'Rua',
     valor: 0,
-    risco: 50
+    risco: 40
   },
   {
     nome: 'Estábulo',
-    valor: 5,
-    risco: 25
+    valor: 50,
+    risco: 50
   },
   {
     nome: 'Hotel',
-    valor: 25,
-    risco: 10
+    valor: 150,
+    risco: 0
   }
 ]
 
@@ -115,14 +133,32 @@ function vidaReset() {
   }
 }
 
-function comprar() {
-  let lojaEscolhida = document.getElementById('loja').value
-  if (lojaEscolhida == 0) {
+function comprarDaLoja() {
+  let produtoEscolhido = document.getElementById('loja').value
+  if (produtoEscolhido == 0) {
     alert('Selecione um produto!')
   } else {
-    if (personagem.dinheiro >= loja[lojaEscolhida - 1].valor) {
-      personagem.forca += loja[lojaEscolhida - 1].forcaAdd
-      personagem.dinheiro -= loja[lojaEscolhida - 1].valor
+    if (personagem.dinheiro >= loja[produtoEscolhido - 1].valor) {
+      personagem.forca += loja[produtoEscolhido - 1].forcaAdd
+      personagem.dinheiro -= loja[produtoEscolhido - 1].valor
+    } else {
+      alert('Você não tem dinheiro suficiente!')
+    }
+  }
+  exibir()
+}
+
+function comprarDaMercearia() {
+  let produtoEscolhido = document.getElementById('mercearia').value
+  if (produtoEscolhido == 0) {
+    alert('Selecione um produto!')
+  } else {
+    if (personagem.dinheiro >= mercearia[produtoEscolhido - 1].valor) {
+      personagem.vida += mercearia[produtoEscolhido - 1].vidaAdd
+      personagem.dinheiro -= mercearia[produtoEscolhido - 1].valor
+      if (personagem.vida > 100) {
+        personagem.vida = 100
+      }
     } else {
       alert('Você não tem dinheiro suficiente!')
     }
@@ -138,6 +174,7 @@ function descansar() {
     if (personagem.dinheiro >= descanso[descansoEscolhido - 1].valor) {
       personagem.energia = 100
       personagem.dinheiro -= descanso[descansoEscolhido - 1].valor
+      personagem.vida -= descanso[descansoEscolhido - 1].risco
     } else {
       alert('Você não tem dinheiro suficiente!')
     }
@@ -163,5 +200,3 @@ function exibir() {
   dinheiro.innerHTML = `Dinheiro: R$ ${personagem.dinheiro}`
 }
 exibir()
-
-//Falta fazer: Relação do risco vs. Perda de vida, dos descansos

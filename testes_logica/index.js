@@ -12,7 +12,7 @@ var personagem = {
   forca: 10,
   vida: 100,
   energia: 100,
-  dinheiro: 1000
+  dinheiro: 0
 }
 
 let desafios = [

@@ -181,13 +181,13 @@ function descansar() {
 function exibir() {
   atv1.innerHTML = `${desafios[0].nome} - Exito: ${
     (personagem.forca * 100) / 10
-  }%`
+  }% - Energia: -${desafios[0].energia}`
   atv2.innerHTML = `${desafios[1].nome} - Exito: ${
     (personagem.forca * 100) / 50
-  }%`
+  }% - Energia: -${desafios[1].energia}`
   atv3.innerHTML = `${desafios[2].nome} - Exito: ${
     (personagem.forca * 100) / 250
-  }%`
+  }% - Energia: -${desafios[2].energia}`
 
   nome.innerHTML = `Nome: ${personagem.nome}`
   forca.innerHTML = `Força: ${personagem.forca}`

@@ -7,6 +7,8 @@ let vida = document.getElementById('vida')
 let energia = document.getElementById('energia')
 let dinheiro = document.getElementById('dinheiro')
 
+let dificuldade = 0
+
 var personagem = {
   nome: prompt('Digite o nome do seu personagem: '),
   forca: 10,
@@ -89,13 +91,13 @@ let descanso = [
 
 function Realizar() {
   let tarefaEscolhida = document.getElementById('tarefa').value
+  dificuldade = desafios[tarefaEscolhida - 1].dificuldade
 
   if (tarefaEscolhida == 0) {
     alert('Selecione uma tarefa!')
   } else if (personagem.energia < desafios[tarefaEscolhida - 1].energia) {
     alert('Você não tem energia suficiente!')
   } else {
-    var dificuldade = desafios[tarefaEscolhida - 1].dificuldade
     if (calculoExito() == true) {
       personagem.forca += calculoRandom() * tarefaEscolhida
       personagem.dinheiro += calculoRandom() * tarefaEscolhida
@@ -110,27 +112,20 @@ function Realizar() {
     vidaReset()
     exibir()
   }
+}
 
-  function calculoExito() {
-    let chanceExito = (personagem.forca * 100) / dificuldade
-    let numRandom = parseInt((Math.random() * 100).toFixed())
-    if (chanceExito >= numRandom) {
-      return true
-    } else {
-      return false
-    }
+function calculoExito() {
+  let chanceExito = (personagem.forca * 100) / dificuldade
+  let numRandom = parseInt((Math.random() * 100).toFixed())
+  if (chanceExito >= numRandom) {
+    return true
+  } else {
+    return false
   }
 }
 
 function calculoRandom() {
   return parseInt((Math.random() * (10 - 5) + 5).toFixed())
-}
-
-function vidaReset() {
-  if (personagem.vida <= 0) {
-    alert('Você morreu!')
-    location.reload()
-  }
 }
 
 function comprarDaLoja() {
@@ -179,6 +174,7 @@ function descansar() {
       alert('Você não tem dinheiro suficiente!')
     }
   }
+  vidaReset()
   exibir()
 }
 
@@ -200,3 +196,10 @@ function exibir() {
   dinheiro.innerHTML = `Dinheiro: R$ ${personagem.dinheiro}`
 }
 exibir()
+
+function vidaReset() {
+  if (personagem.vida <= 0) {
+    alert('Você morreu!')
+    location.reload()
+  }
+}

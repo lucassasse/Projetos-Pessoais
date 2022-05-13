@@ -14,6 +14,46 @@ const connection = mysql.createConnection({
 })
 
 connection.connect(function (err) {
+  if (err) console.error('Error connecting: ' + err.stack)
+  return
+})
+
+connection.query('DELETE FROM users WHERE id = 3', function (err, result) {
+  if (!err) {
+    console.log('Usuário Apagado')
+  } else {
+    console.log('Erro ao Apagar')
+  }
+})
+
+/*
+connection.query(
+  "UPDATE users SET nome = 'Julio' WHERE id = 7",
+  function (err, result) {
+    if (!err) {
+      console.log('Usuário Editado')
+    } else {
+      console.log('Erro ao Editar')
+    }
+  }
+)
+*/
+
+/*
+connection.query(
+  "INSERT INTO users(nome, email) VALUES ('Pedro', 'pedro@email.com')",
+  function (err, result) {
+    if (!err) {
+      console.log('Usuário cadastrado com sucesso!')
+    } else {
+      console.log('Erro ao cadastrar o usuário!')
+    }
+  }
+)
+*/
+
+/*
+connection.connect(function (err) {
   if (err) {
     console.error('error connecting: ' + err.stack)
     return
@@ -48,3 +88,4 @@ app.get('/contato', function (req, res) {
 })
 
 app.listen(8080)
+*/

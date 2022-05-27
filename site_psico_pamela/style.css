@@ -357,6 +357,7 @@ body.menu-expanded button path {
   color: var(--primary-color);
   font-size: 1.6rem;
   line-height: 150%;
+  padding: 2rem;
 }
 
 /*=== SERVICES =================================*/
@@ -497,7 +498,7 @@ footer .social-links {
   }
 
   section {
-    padding-block: 16rem;
+    padding-block: 10rem;
   }
 
   section header h2 {

@@ -1,4 +1,7 @@
 import { useState } from 'react'
+
+import { BrowserRouter as Router, Switch, Route, Link } from 'react'
+
 import './App.css'
 import HelloWorld from './components/HelloWorld'
 import SayMyName from './components/SayMyName'
@@ -50,6 +53,20 @@ function App() {
       <h1>State Lift</h1>
       <SeuNome setNome={setNomeX} />
       <Saudacao nome={nomeX} />
+      <hr />
+      <Router>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/empresa">Empresa</Link>
+          </li>
+          <li>
+            <Link to="/contato">Contato</Link>
+          </li>
+        </ul>
+      </Router>
     </div>
   )
 }

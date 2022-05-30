@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { BrowserRouter as Router, Switch, Route, Link } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import './App.css'
 import HelloWorld from './components/HelloWorld'
@@ -14,6 +14,11 @@ import Condicional from './components/Condicional'
 import OutraLista from './components/OutraLista'
 import SeuNome from './components/SeuNome'
 import Saudacao from './components/Saudacao'
+import NavBar from './components/layout/NavBar'
+import Home from './pages/Home'
+import Empresa from './pages/Empresa'
+import Contato from './pages/Contato'
+import Footer from './components/layout/Footer'
 
 function App() {
   const name = 'Fulano'
@@ -55,17 +60,13 @@ function App() {
       <Saudacao nome={nomeX} />
       <hr />
       <Router>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/empresa">Empresa</Link>
-          </li>
-          <li>
-            <Link to="/contato">Contato</Link>
-          </li>
-        </ul>
+        <NavBar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/Empresa" element={<Empresa />} />
+          <Route path="/Contato" element={<Contato />} />
+        </Routes>
+        <Footer />
       </Router>
     </div>
   )

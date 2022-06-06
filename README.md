@@ -7,6 +7,7 @@ Estudo realizado para fixação de conhecimento sobre utilização de APIs.
 (Realizado com auxílio de curso).
 
 ### estudos gerais:
+
 Pasta para arquivos de testes sobre conteúdos diversos.
 (Realizado sem auxílio de curso).
 
@@ -18,7 +19,7 @@ Projeto realizado para fixação de conhecimento sobre NodeJS e MySQL.
 
 ### estudos_react
 
-Trata-se de aplicação para cadastro e controle financeiro de projetos, onde o usuário cadastra o projeto e define um custo para o mesmo. Após este cadastro, o usuário poderá editar-lo, ou então, adicionar serviços ao mesmo, adicionando valores a estes. Assim, haverá controle financeiro sobre todos os serviços realizados sobre o projeto cadastrado.
+Trata-se de aplicação para cadastro e controle financeiro de projetos, onde o usuário cadastra o projeto e define um custo para o mesmo. Após este cadastro, o usuário poderá editá-lo, ou então, adicionar serviços ao mesmo, adicionando valores a estes. Assim, haverá controle financeiro sobre todos os serviços realizados sobre o projeto cadastrado.
 Projeto realizado para fixação de conhecimento sobre React.
 (Realizado com auxílio de curso)
 
@@ -31,7 +32,7 @@ Projeto realizado pacom fins de prática de JavaScript e lógica.
 ### mini_rpg
 
 Trata-se de um mini RPG, onde o usuário deve administrar seus status de vida e recursos.
-Projeto realizado pacom fins de prática de JavaScript e lógica.
+Projeto realizado com fins de prática de JavaScript e lógica.
 (Realizado sem auxílio de curso)
 
 ### site_psico_pamela

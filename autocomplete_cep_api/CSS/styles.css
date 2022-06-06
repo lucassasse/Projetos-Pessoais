@@ -144,7 +144,7 @@
 
 /* Responsive */
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   #save-btn {
     width: 8em;
   }

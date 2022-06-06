@@ -1,0 +1,21 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+hr {
+  border: 1px solid #000;
+  width: 40%;
+}
+
+.hr {
+  margin-top: 1.8em;
+}
+
+#word_underline {
+  letter-spacing: 0.5rem;
+}
+
+#used_letters {
+  letter-spacing: 0.2rem;
+}

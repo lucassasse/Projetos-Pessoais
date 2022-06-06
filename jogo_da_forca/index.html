@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <script src="./scripts/index.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>JOGO DA FORCA</h1>
+    <hr />
+    <h3>Cadastrar palavra:</h3>
+    <input
+      type="password"
+      id="word_registration"
+      placeholder="Digite a palavra..."
+      minlength="2"
+      required
+    />
+    <button onclick="save_word()">Salvar</button>
+    <hr class="hr" />
+    <h3>Digite uma letra:</h3>
+    <input
+      type="text"
+      id="letter"
+      placeholder="Letra..."
+      maxlength="1"
+      required
+    />
+    <button onclick="letter_send()">Enviar</button>
+    <hr class="hr" />
+    <h3>Palavra cadastrada:</h3>
+    <p id="word_underline">-</p>
+    <p id="tip">Dica: A palavra possui: _ caracteres.</p>
+    <hr class="hr" />
+    <h3>Letras já utilizadas:</h3>
+    <p id="used_letters">-</p>
+    <hr class="hr" />
+  </body>
+</html>
+
+<!--
+Input para palavra.
+Botão para enviar.
+Limpar Input palavra.
+
+Transformar palavra em array.
+Apresentar output com tamanho da array.
+
+Input para uma letra.
+Tamanho max = 1 caracter.
+Botão para enviar.
+Limpar Input letra.
+
+Mapear array da palavra e verificar se existe a letra no array.
+Se sim, verificar a posição.
+Colocar a letra na(s) posição(ões) no output.
+
+Se output.lenght == palavra.lenght = Fim de jogo.
+
+
+Detalhe add: Mostrar letras já utilizadas.
+Detalhe add: Criar número de tentativas.
+-->

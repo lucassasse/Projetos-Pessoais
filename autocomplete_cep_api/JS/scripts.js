@@ -13,10 +13,6 @@ cepInput.addEventListener('keypress', e => {
   const onlyNumbers = /[0-9]|\./
   const key = String.fromCharCode(e.keyCode)
 
-  console.log(key)
-
-  console.log(onlyNumbers.test(key))
-
   // allow only numbers
   if (!onlyNumbers.test(key)) {
     e.preventDefault()
@@ -24,7 +20,7 @@ cepInput.addEventListener('keypress', e => {
   }
 })
 
-// Evento to get address
+// Event to get address
 cepInput.addEventListener('keyup', e => {
   const inputValue = e.target.value
 
@@ -45,10 +41,6 @@ const getAddress = async cep => {
   const response = await fetch(apiUrl)
 
   const data = await response.json()
-
-  console.log(data)
-  console.log(formInputs)
-  console.log(data.erro)
 
   // Show error and reset form
   if (data.erro === 'true') {

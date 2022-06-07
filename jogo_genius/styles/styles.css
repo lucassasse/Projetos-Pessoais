@@ -1,0 +1,35 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  background-color: rgb(150, 150, 150);
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+}
+
+.quadrado {
+  width: 100px;
+  height: 100px;
+}
+
+#azul {
+  border-radius: 100% 0 0 0;
+  border: 1px solid blue;
+}
+
+#amarelo {
+  border-radius: 0 100% 0 0;
+  border: 1px solid yellow;
+}
+
+#vermelho {
+  border-radius: 0 0 0 100%;
+  border: 1px solid red;
+}
+
+#verde {
+  border-radius: 0 0 100% 0;
+  border: 1px solid green;
+}

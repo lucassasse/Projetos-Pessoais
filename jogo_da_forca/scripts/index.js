@@ -1,16 +1,18 @@
-input_word_registration = document.querySelector('#word_registration')
-input_letter = document.querySelector('#letter')
-output_tip = document.querySelector('#tip')
-word_underline = document.querySelector('#word_underline')
-output_used_letters = document.querySelector('#used_letters')
+const input_word_registration = document.querySelector('#word_registration')
+const input_letter = document.querySelector('#letter')
+const output_tip = document.querySelector('#tip')
+const word_underline = document.querySelector('#word_underline')
+const output_used_letters = document.querySelector('#used_letters')
+const outputImg = document.getElementById('imagem')
 
 let word = ''
 let letter = ''
 let letters_used = []
 let underline_tip = []
+let numErrors = 0
 
 function save_word() {
-  word = input_word_registration.value
+  word = input_word_registration.value.toLowerCase()
 
   if (word == '' || word == ' ' || word.length < 2) {
     alert('Digite uma palavra válida!')
@@ -20,10 +22,11 @@ function save_word() {
   }
 
   input_word_registration.value = ''
+  word_registration.disabled = true
 }
 
 function letter_send() {
-  letter = input_letter.value
+  letter = input_letter.value.toLowerCase()
 
   if (word.length < 2) {
     alert('Primeiro, digite uma palavra válida!')
@@ -32,10 +35,12 @@ function letter_send() {
   } else {
     find_letter(letter)
     used_letters(letter)
+    testError(letter)
     input_letter.value = ''
   }
 
   input_letter.value = []
+  input_letter.focus()
 }
 
 function letter_count() {
@@ -56,6 +61,7 @@ function find_letter(letter) {
     indices.push(idx)
     idx = word_array.indexOf(letter, idx + 1)
   }
+
   att_underline_tip(indices, letter)
 }
 
@@ -78,7 +84,36 @@ function used_letters(letter_add) {
 
 function check_win() {
   if (underline_tip.indexOf('_') == -1) {
-    alert('Parabéns, você venceu!')
-    //location.reload()
+    alert(`Parabéns, você venceu!\n\A palavra era: ${word}`)
+    finish()
   }
+}
+
+function testError(letter) {
+  if (word.indexOf(letter) == -1) {
+    numErrors++
+    if (numErrors == 1) {
+      outputImg.src = './imagens/img2.png'
+    } else if (numErrors == 2) {
+      outputImg.src = './imagens/img3.png'
+    } else if (numErrors == 3) {
+      outputImg.src = './imagens/img4.png'
+    } else if (numErrors == 4) {
+      outputImg.src = './imagens/img5.png'
+    } else if (numErrors == 5) {
+      outputImg.src = './imagens/img6.png'
+    } else if (numErrors == 6) {
+      outputImg.src = './imagens/img7.png'
+      alert(`Lamento, você perdeu!\n\A palavra era: ${word}`)
+      finish()
+    }
+  }
+}
+
+function finish() {
+  input_letter.disabled = true
+}
+
+function reset() {
+  location.reload()
 }

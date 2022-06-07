@@ -1,15 +1,11 @@
 * {
   font-family: 'Roboto', sans-serif;
   text-align: center;
+  justify-content: center;
 }
 
-hr {
-  border: 1px solid #000;
-  width: 40%;
-}
-
-.hr {
-  margin-top: 1.8em;
+div {
+  margin: 25px;
 }
 
 #word_underline {
@@ -18,4 +14,23 @@ hr {
 
 #used_letters {
   letter-spacing: 0.2rem;
+}
+
+img {
+  width: 100px;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+}
+
+#cima,
+#baixo {
+  display: flex;
+  flex-direction: row;
+}
+
+#reset {
+  width: 200px;
 }

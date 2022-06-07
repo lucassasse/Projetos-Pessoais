@@ -6,7 +6,13 @@ Trata-se de aplicação onde o usuário insere um CEP e, utilizando da API, a ap
 Estudo realizado para fixação de conhecimento sobre utilização de APIs.
 (Realizado com auxílio de curso).
 
-### estudos gerais:
+### blog_fetch_api
+
+Trata-se de blog onde é utilizado uma Fake API para realizar requisições assíncronas e adicionar comentários a estas requisições.
+Projeto realizado para fixação de conhecimento sobre requisições nativas JS - Fetch e API.
+(Realizado com auxílio de curso).
+
+### estudos_gerais:
 
 Pasta para arquivos de testes sobre conteúdos diversos.
 (Realizado sem auxílio de curso).
@@ -23,10 +29,16 @@ Trata-se de aplicação para cadastro e controle financeiro de projetos, onde o 
 Projeto realizado para fixação de conhecimento sobre React.
 (Realizado com auxílio de curso)
 
-### jogo da forca:
+### jogo_da_forca:
 
-Trata-se de jogo da forca.
-Projeto realizado pacom fins de prática de JavaScript e lógica.
+Trata-se do clássico jogo da forca.
+Projeto realizado com fins de prática de JavaScript e lógica.
+(Realizado sem auxílio de curso)
+
+### jogo_genius
+
+Trata-se do clássico jogo genius.
+Projeto realizado com fins de prática de JavaScript e lógica.
 (Realizado sem auxílio de curso)
 
 ### mini_rpg

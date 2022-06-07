@@ -1,35 +1,120 @@
 * {
   font-family: 'Roboto', sans-serif;
-  text-align: center;
+  font-size: 1.5em;
   background-color: rgb(150, 150, 150);
+}
+
+p {
+  font-size: 0.6em;
+  position: absolute;
+  margin: 0;
+  top: 10px;
+  left: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 98%;
 }
 
 #main {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
 }
 
-.quadrado {
-  width: 100px;
-  height: 100px;
+.square {
+  width: 1.2em;
+  min-width: 0.8em;
+  height: 1.2em;
+  margin: 3px;
+  cursor: pointer;
 }
 
-#azul {
+#blue {
   border-radius: 100% 0 0 0;
   border: 1px solid blue;
 }
 
-#amarelo {
-  border-radius: 0 100% 0 0;
-  border: 1px solid yellow;
+#blue:hover {
+  background-color: rgba(0, 0, 255, 0.7);
 }
 
-#vermelho {
+.blue2 {
+  background-color: rgba(0, 0, 255, 0.3);
+}
+
+.blueActive {
+  background-color: blue;
+}
+
+#yellow {
   border-radius: 0 0 0 100%;
-  border: 1px solid red;
+  border: 1px solid yellow;
+  margin-top: 5px;
 }
 
-#verde {
+#yellow:hover {
+  background-color: rgba(255, 255, 0, 0.7);
+}
+
+.yellow2 {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+.yellowActive {
+  background-color: yellow;
+}
+
+#red {
   border-radius: 0 0 100% 0;
+  border: 1px solid red;
+  margin-top: 5px;
+}
+
+#red:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.red2 {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.redActive {
+  background-color: red;
+}
+
+#green {
+  border-radius: 0 100% 0 0;
   border: 1px solid green;
+}
+
+#green:hover {
+  background-color: rgba(0, 255, 0, 0.7);
+}
+
+.green2 {
+  background-color: rgba(0, 128, 0, 0.3);
+}
+
+.greenActive {
+  background-color: green;
+}
+
+button {
+  font-size: 1em;
+  margin-top: 36px;
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 2px 70px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
 }

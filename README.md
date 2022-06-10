@@ -12,7 +12,7 @@ Trata-se de blog onde é utilizado uma Fake API para realizar requisições ass�
 Projeto realizado para fixação de conhecimento sobre requisições nativas JS - Fetch e API.
 (Realizado com auxílio de curso).
 
-### busque_cnpj - Em desenvolvimento
+### busque_cnpj
 
 Trata-se de aplicação onde o usuário insere um CNPJ e obtém como retorno, várias informações úteis sobre o mesmo.
 Projeto realizado para auxiliar nas buscas de informações sobre empresas devedoras, compilando as informações importantes e agilizando o trabalho dentro do escritório.

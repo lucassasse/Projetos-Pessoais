@@ -12,6 +12,12 @@ Trata-se de blog onde é utilizado uma Fake API para realizar requisições ass�
 Projeto realizado para fixação de conhecimento sobre requisições nativas JS - Fetch e API.
 (Realizado com auxílio de curso).
 
+### busque_cnpj - Em desenvolvimento
+
+Trata-se de aplicação onde o usuário insere um CNPJ e obtém como retorno, várias informações úteis sobre o mesmo.
+Projeto realizado para auxiliar nas buscas de informações sobre empresas devedoras, compilando as informações importantes e agilizando o trabalho dentro do escritório.
+(Realizado sem auxílio de curso).
+
 ### estudos_gerais:
 
 Pasta para arquivos de testes sobre conteúdos diversos.
@@ -29,13 +35,13 @@ Trata-se de aplicação para cadastro e controle financeiro de projetos, onde o 
 Projeto realizado para fixação de conhecimento sobre React.
 (Realizado com auxílio de curso)
 
-### jogo_da_forca:
+### jogo_da_forca
 
 Trata-se do clássico jogo da forca.
 Projeto realizado com fins de prática de JavaScript e lógica.
 (Realizado sem auxílio de curso)
 
-### jogo_genius
+### jogo_genius - Em desenvolvimento
 
 Trata-se do clássico jogo genius.
 Projeto realizado com fins de prática de JavaScript e lógica.

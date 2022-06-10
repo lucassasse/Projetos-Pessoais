@@ -14,20 +14,22 @@
       <form>
         <fieldset action="send">
           <legend>CNPJ</legend>
-          <p>
+          <div>
             <input
               type="text"
-              name="cnpj"
               id="input"
               placeholder="00.000.000/0001-00"
+              maxlength="18"
             />
             <button onclick="find()" id="button">Pesquisar</button>
-          </p>
+            <button onClick="window.print()">Imprimir</button>
+          </div>
         </fieldset>
       </form>
     </div>
 
-    <div id="divOutput">
-    </div>
+    <div id="divOutput"></div>
+
+    <footer><strong>Desenvolvido por:</strong> Lucas Eduardo Sasse</footer>
   </body>
 </html>

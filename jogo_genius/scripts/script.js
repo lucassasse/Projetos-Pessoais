@@ -1,12 +1,3 @@
-//blue = 0
-//yellow = 1
-//green = 2
-//red = 3
-
-//Fazer piscar a cor
-//Quando clicar, verificar se a cor clicada é a cor certa
-//Se array inteira correta - play dnv)
-
 const blue = document.getElementById('blue')
 const yellow = document.getElementById('yellow')
 const green = document.getElementById('green')
@@ -33,9 +24,13 @@ function getColor(color) {
 }
 
 function play() {
+  actualGameClick = []
   actualGame.push(randomColor())
+  piscarCor()
   console.log(actualGame)
 }
+
+function piscarCor() {}
 
 function randomColor() {
   return (Math.random() * (3 - 0) + 0).toFixed(0)
@@ -48,12 +43,15 @@ function compareArray() {
     if (actualGame[i] === actualGameClick[i]) {
     } else {
       fail()
+      return stop
     }
   }
+
   console.log('true')
   points++
   pointsOutput.innerHTML = points
   actualGameClick = []
+  play()
 }
 
 function fail() {

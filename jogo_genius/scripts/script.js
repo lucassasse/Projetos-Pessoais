@@ -18,19 +18,53 @@ function getColor(color) {
   } else {
     actualGameClick.push('3')
   }
-  console.log(actualGameClick)
 
   compareArray()
 }
 
 function play() {
-  actualGameClick = []
-  actualGame.push(randomColor())
-  piscarCor(actualGame)
-  console.log(actualGame)
+  points = 0
+  pointsOutput.innerHTML = `Score: ${points}`
+  actualGame = []
+  continueGame()
 }
 
-function piscarCor(actualGame) {}
+function continueGame() {
+  actualGameClick = []
+  actualGame.push(randomColor())
+  setTimeout(activeColor, 1000)
+}
+
+function activeColor() {
+  for (var i = 0, len = actualGame.length; i < len; i++) {
+    delay(i)
+  }
+
+  function delay(i) {
+    setTimeout(function () {
+      if (actualGame[i] === '0') {
+        blue.classList.add(`blueActive`)
+        setTimeout(desactiveColor, 300)
+      } else if (actualGame[i] === '1') {
+        yellow.classList.add(`yellowActive`)
+        setTimeout(desactiveColor, 300)
+      } else if (actualGame[i] === '2') {
+        green.classList.add(`greenActive`)
+        setTimeout(desactiveColor, 300)
+      } else {
+        red.classList.add(`redActive`)
+        setTimeout(desactiveColor, 300)
+      }
+    }, 1000 * i)
+  }
+}
+
+function desactiveColor() {
+  blue.classList.remove(`blueActive`)
+  yellow.classList.remove(`yellowActive`)
+  green.classList.remove(`greenActive`)
+  red.classList.remove(`redActive`)
+}
 
 function randomColor() {
   return (Math.random() * (3 - 0) + 0).toFixed(0)
@@ -47,11 +81,10 @@ function compareArray() {
     }
   }
 
-  console.log('true')
   points++
-  pointsOutput.innerHTML = points
+  pointsOutput.innerHTML = `Score: ${points}`
   actualGameClick = []
-  play()
+  continueGame()
 }
 
 function fail() {

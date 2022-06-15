@@ -39,7 +39,7 @@ body {
 }
 
 #blue:hover {
-  background-color: rgba(0, 0, 255, 0.7);
+  background-color: rgba(0, 0, 255, 0.5);
 }
 
 .blue2 {
@@ -57,7 +57,7 @@ body {
 }
 
 #yellow:hover {
-  background-color: rgba(255, 255, 0, 0.7);
+  background-color: rgba(255, 255, 0, 0.5);
 }
 
 .yellow2 {
@@ -75,7 +75,7 @@ body {
 }
 
 #red:hover {
-  background-color: rgba(255, 0, 0, 0.7);
+  background-color: rgba(255, 0, 0, 0.5);
 }
 
 .red2 {
@@ -92,7 +92,7 @@ body {
 }
 
 #green:hover {
-  background-color: rgba(0, 255, 0, 0.7);
+  background-color: rgba(0, 255, 0, 0.5);
 }
 
 .green2 {

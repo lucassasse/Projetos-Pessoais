@@ -41,7 +41,7 @@ Trata-se do clássico jogo da forca.
 Projeto realizado com fins de prática de JavaScript e lógica.
 (Realizado sem auxílio de curso)
 
-### jogo_genius - Em desenvolvimento
+### jogo_genius
 
 Trata-se do clássico jogo genius.
 Projeto realizado com fins de prática de JavaScript e lógica.

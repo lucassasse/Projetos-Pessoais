@@ -26,11 +26,11 @@ function getColor(color) {
 function play() {
   actualGameClick = []
   actualGame.push(randomColor())
-  piscarCor()
+  piscarCor(actualGame)
   console.log(actualGame)
 }
 
-function piscarCor() {}
+function piscarCor(actualGame) {}
 
 function randomColor() {
   return (Math.random() * (3 - 0) + 0).toFixed(0)

@@ -24,7 +24,7 @@ function getColor(color) {
 
 function play() {
   points = 0
-  pointsOutput.innerHTML = `Score: ${points}`
+  printScore()
   actualGame = []
   continueGame()
 }
@@ -82,9 +82,13 @@ function compareArray() {
   }
 
   points++
-  pointsOutput.innerHTML = `Score: ${points}`
   actualGameClick = []
+  printScore()
   continueGame()
+}
+
+function printScore() {
+  pointsOutput.innerHTML = `Score: ${points}`
 }
 
 function fail() {

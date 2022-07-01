@@ -6,13 +6,19 @@ let tasks = []
 console.log(inputTxt)
 console.log(divOutput)
 
-function save() {
-  tasks.push(inputTxt.value)
+function addTask() {
+  if (!inputTxt.value) {
+    alert('Digite uma tarefa!')
+  } else {
+    const todoObject = { id: tasks.length, text: inputTxt.value, isDone: false }
+    tasks.unshift(todoObject)
+    printTasks()
+  }
+
   inputTxt.value = ''
   inputTxt.focus()
-  list()
-
-  console.log(tasks)
 }
 
-function list() {}
+function printTasks() {
+  console.log(tasks)
+}

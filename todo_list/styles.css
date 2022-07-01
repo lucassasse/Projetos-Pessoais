@@ -61,6 +61,11 @@ main button {
   border: 1px var(--wine) solid;
   cursor: pointer;
   box-shadow: 2px 2px 2px -2px #00000073;
+  transition: 0.3s;
+}
+
+main button:hover {
+  background-color: rgba(0, 0, 0, 0.199);
 }
 
 main #output {
@@ -71,12 +76,17 @@ main #output {
   flex-direction: column;
 }
 
-main #output p {
+main #output li {
   border: 1px solid var(--wine);
   box-shadow: 2px 2px 2px -2px #00000073;
   padding: 15px 30px;
   border-radius: 2px;
   margin-bottom: 25px;
+  list-style-type: none;
+}
+
+main #output li.checked {
+  text-decoration: line-through;
 }
 
 /* ************** */

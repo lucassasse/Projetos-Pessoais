@@ -6,4 +6,13 @@ let tasks = []
 console.log(inputTxt)
 console.log(divOutput)
 
-function save() {}
+function save() {
+  tasks.push(inputTxt.value)
+  inputTxt.value = ''
+  inputTxt.focus()
+  list()
+
+  console.log(tasks)
+}
+
+function list() {}

@@ -1,24 +1,59 @@
-const inputTxt = document.querySelector('#input')
-const divOutput = document.querySelector('#output')
-
-let tasks = []
-
-console.log(inputTxt)
-console.log(divOutput)
-
+// Create a new list item when clicking on the "Salvar" button
 function addTask() {
-  if (!inputTxt.value) {
-    alert('Digite uma tarefa!')
+  let li = document.createElement('li')
+  let inputValue = document.getElementById('input').value
+  let text = document.createTextNode(inputValue)
+  li.appendChild(text)
+
+  if (inputValue == '') {
+    alert('Primeiro, digite uma tarefa.')
   } else {
-    const todoObject = { id: tasks.length, text: inputTxt.value, isDone: false }
-    tasks.unshift(todoObject)
-    printTasks()
+    document.getElementById('ulOutput').appendChild(li)
   }
+  document.getElementById('input').value = ''
+  document.getElementById('input').focus()
 
-  inputTxt.value = ''
-  inputTxt.focus()
+  let span = document.createElement('SPAN')
+  let txt = document.createTextNode('X')
+  span.className = 'close'
+  span.appendChild(txt)
+  li.appendChild(span)
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function () {
+      var div = this.parentElement
+      div.style.display = 'none'
+    }
+  }
 }
 
-function printTasks() {
-  console.log(tasks)
+// Create a "close" button and append it to each list item
+let myNodelist = document.getElementsByTagName('li')
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement('SPAN')
+  var txt = document.createTextNode('X')
+  span.className = 'close'
+  span.appendChild(txt)
+  myNodelist[i].appendChild(span)
 }
+
+// Click on a close button to hide the current list item
+let close = document.getElementsByClassName('close')
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function () {
+    let div = this.parentElement
+    div.style.display = 'none'
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+let list = document.querySelector('ul')
+list.addEventListener(
+  'click',
+  function (e) {
+    if (e.target.tagName === 'LI') {
+      e.target.classList.toggle('checked')
+    }
+  },
+  false
+)

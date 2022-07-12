@@ -21,7 +21,7 @@ Projeto realizado para auxiliar nas buscas de informações sobre empresas deved
 ### estudos_gerais:
 
 Pasta para arquivos de testes sobre conteúdos diversos.
-(Realizado sem auxílio de curso).
+(Realizado sem auxílio de cursos).
 
 ### estudos_nodeJS
 
@@ -57,3 +57,10 @@ Projeto realizado com fins de prática de JavaScript e lógica.
 
 Site - Single page - Desenvolvido para amiga próxima, para fins de estudo e fixação de conhecimento.
 (Realizado com auxílio de curso)
+
+### todo_list - Em desenvolvimento
+
+Projeto de lista de atividades, onde o usuário cadastra uma tarefa e/ou atividade ou lembrete.
+Após isso, o usuário poderá marcar a atividade como concluída e/ou excluí-la.
+As atividades também se mantem salvas através do localStorage.
+(Realizado sem auxílio de curso).

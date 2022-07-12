@@ -86,11 +86,20 @@ main #ulOutput li {
   box-shadow: 0px 8px 10px -5px #000000a9, -41px -47px 5px -4px rgba(0, 0, 0, 0);
 }
 
-ul li.checked {
+main ul li{
+  display: flex;
+  flex-direction: row;
+}
+
+ul p:hover {
+  cursor: pointer;
+}
+
+ul p.checked {
   text-decoration: line-through;
 }
 
-ul li.checked::before {
+ul p.checked::before {
   content: '';
   border-color: black;
   border-style: solid;

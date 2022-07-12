@@ -23,6 +23,7 @@ function save_word() {
 
   input_word_registration.value = ''
   word_registration.disabled = true
+  document.getElementById('buttonSave').disabled = true
 }
 
 function letter_send() {
@@ -112,6 +113,7 @@ function testError(letter) {
 
 function finish() {
   input_letter.disabled = true
+  document.getElementById('buttonLetter').disabled = true
 }
 
 function reset() {

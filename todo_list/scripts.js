@@ -1,14 +1,75 @@
+//Ao inves de clica em salvar e adicionar na lista HTML...
+//Ao clicar em adicionar, salvar o .value em um array e depois usar o array pra adicionar na lista HTML.
+
+//função do botão X = excluir de fato o item do array.
+
+input = document.getElementById('input')
+let listTask = ['kkkkkkkkkkkk', '11111111', '222 222 222 222']
+
+// Start existing to-do list
+
+function initListTasks() {
+  for (i = 0, len = listTask.length; i < len; i++) {
+    let li = document.createElement('li')
+    let p = document.createElement('p')
+    let text = document.createTextNode(listTask[i])
+
+    li.appendChild(p)
+    p.appendChild(text)
+
+    document.getElementById('ulOutput').appendChild(li)
+  }
+}
+initListTasks()
+
 // Create a new list item when clicking on the "Salvar" button
 function addTask() {
+  if (input.value == '') {
+    alert('Enter a task.')
+    stop
+  } else {
+    listTask.unshift(input.value)
+    listTasks()
+  }
+
+  input.value = ''
+  input.focus()
+}
+
+function listTasks() {
   let li = document.createElement('li')
+  let p = document.createElement('p')
+  let text = document.createTextNode(listTask[0])
+
+  li.appendChild(p)
+  p.appendChild(text)
+
+  document.getElementById('ulOutput').appendChild(li)
+
+  let span = document.createElement('SPAN')
+  let txt = document.createTextNode('X')
+  span.className = 'close'
+  span.appendChild(txt)
+  li.appendChild(span)
+}
+
+/*
+function addTask() {
+  let li = document.createElement('li')
+  let p = document.createElement('p')
   let inputValue = document.getElementById('input').value
   let text = document.createTextNode(inputValue)
-  li.appendChild(text)
+  li.appendChild(p)
+  p.appendChild(text)
 
   if (inputValue == '') {
-    alert('Primeiro, digite uma tarefa.')
+    alert('Enter a task.')
   } else {
     document.getElementById('ulOutput').appendChild(li)
+
+    listTask.unshift(inputValue)
+    console.log(listTask)
+    
   }
   document.getElementById('input').value = ''
   document.getElementById('input').focus()
@@ -26,6 +87,7 @@ function addTask() {
     }
   }
 }
+*/
 
 // Create a "close" button and append it to each list item
 let myNodelist = document.getElementsByTagName('li')
@@ -36,6 +98,10 @@ for (i = 0; i < myNodelist.length; i++) {
   span.appendChild(txt)
   myNodelist[i].appendChild(span)
 }
+
+// Click the edit button to edit the task
+
+/**/
 
 // Click on a close button to hide the current list item
 let close = document.getElementsByClassName('close')

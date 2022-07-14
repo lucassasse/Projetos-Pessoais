@@ -68,7 +68,7 @@ main button:hover {
   background-color: rgba(0, 0, 0, 0.199);
 }
 
-main #ulOutput {
+main ul {
   color: var(--wine);
   padding: 10px 20px;
   width: 500px;
@@ -76,10 +76,9 @@ main #ulOutput {
   flex-direction: column;
 }
 
-main #ulOutput li {
+main ul li {
   border: 1px solid var(--wine);
   box-shadow: 2px 2px 2px -2px #00000073;
-  padding: 15px 30px;
   border-radius: 2px;
   margin-bottom: 25px;
   list-style-type: none;
@@ -89,6 +88,17 @@ main #ulOutput li {
 main ul li{
   display: flex;
   flex-direction: row;
+  text-align: justify;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main ul li:hover{
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+ul p{
+  margin: 10px 20px;
 }
 
 ul p:hover {
@@ -99,22 +109,13 @@ ul p.checked {
   text-decoration: line-through;
 }
 
-ul p.checked::before {
-  content: '';
-  border-color: black;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
 .close {
   background-color: #f44336;
-  padding: 12px 16px 12px 16px;
+  height: 15px;
+  padding: 6px 8px;
+  margin-right: 20px;
   font-weight: bold;
+  border-radius: 2px;
 }
 
 .close:hover {
@@ -128,7 +129,6 @@ ul p.checked::before {
 
 footer {
   background-color: var(--wine);
-  width: 100vw;
   height: 10vh;
   display: flex;
   align-items: center;

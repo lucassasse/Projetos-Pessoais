@@ -3,6 +3,8 @@
 
 //função do botão X = excluir de fato o item do array.
 
+//Salvar e buscar a lista do localStorage ao inves do array local
+
 input = document.getElementById('input')
 let listTask = ['kkkkkkkkkkkk', '11111111', '222 222 222 222']
 

@@ -28,6 +28,7 @@ body {
 .slide {
   width: 25%;
   position: relative;
+  transition: 1.5s;
 }
 
 .slide img {
@@ -43,7 +44,7 @@ body {
 }
 
 .manual-btn {
-  border: 3px solid red;
+  border: 2px solid red;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -74,7 +75,7 @@ body {
 }
 
 .navigation-auto div {
-  border: 3px solid blue;
+  border: 2px solid blue;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;

@@ -64,6 +64,11 @@ let close = document.getElementsByClassName('close')
 for (i = 0; i < close.length; i++) {
   close[i].onclick = function () {
     let div = this.parentElement
-    div.style.display = 'none'
+    //Verificar posição do elemento clicado, atraves de uma varedora (forEach?) e deletar o item da mesma posição do array
+    //Atualizar a lista - printTasks()
+    
+    //console.log(div)
+    //div.remove()
+    //div.style.display = 'none'
   }
 }

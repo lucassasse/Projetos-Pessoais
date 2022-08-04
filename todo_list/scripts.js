@@ -1,12 +1,9 @@
-//Ao inves de clica em salvar e adicionar na lista HTML...
-//Ao clicar em adicionar, salvar o .value em um array e depois usar o array pra adicionar na lista HTML.
-
 //função do botão X = excluir de fato o item do array.
 
-//Salvar e buscar a lista do localStorage ao inves do array local
+//Salvar e buscar a lista do localStorage ao invés do array local
 
 input = document.getElementById('input')
-let listTask = ['kkkkkkkkkkkk', '11111111', '222 222 222 222']
+let listTask = ['Comprar pão', 'Lavar a louça', 'Varrer a casa']
 
 // Start existing to-do list
 
@@ -30,7 +27,7 @@ function addTask() {
     alert('Enter a task.')
     stop
   } else {
-    listTask.unshift(input.value)
+    listTask.push(input.value)
     listTasks()
   }
 
@@ -41,7 +38,7 @@ function addTask() {
 function listTasks() {
   let li = document.createElement('li')
   let p = document.createElement('p')
-  let text = document.createTextNode(listTask[0])
+  let text = document.createTextNode(listTask[listTask.length - 1])
 
   li.appendChild(p)
   p.appendChild(text)
@@ -54,42 +51,6 @@ function listTasks() {
   span.appendChild(txt)
   li.appendChild(span)
 }
-
-/*
-function addTask() {
-  let li = document.createElement('li')
-  let p = document.createElement('p')
-  let inputValue = document.getElementById('input').value
-  let text = document.createTextNode(inputValue)
-  li.appendChild(p)
-  p.appendChild(text)
-
-  if (inputValue == '') {
-    alert('Enter a task.')
-  } else {
-    document.getElementById('ulOutput').appendChild(li)
-
-    listTask.unshift(inputValue)
-    console.log(listTask)
-    
-  }
-  document.getElementById('input').value = ''
-  document.getElementById('input').focus()
-
-  let span = document.createElement('SPAN')
-  let txt = document.createTextNode('X')
-  span.className = 'close'
-  span.appendChild(txt)
-  li.appendChild(span)
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function () {
-      var div = this.parentElement
-      div.style.display = 'none'
-    }
-  }
-}
-*/
 
 // Create a "close" button and append it to each list item
 let myNodelist = document.getElementsByTagName('li')

@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="scripts.js" defer></script>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <!-- <script src="scripts.js" defer></script> -->
+    <link rel="stylesheet" href="styles2.css" />
+    <script src="scripts2.js" defer></script>
   </head>
   <body>
     <header>
@@ -16,29 +18,29 @@
       <h3>IN PRODUCTION</h3>
 
       <div id="inputDiv">
-        <input type="text" id="input" placeholder="Type a task..." />
-        <button onClick="addTask()">Save</button>
+        <input type="text" id="inputTxt" placeholder="Type a task..." />
+        <button onClick="getTask()">Save</button>
+        <button onclick="clearTasks()">Clear</button>
       </div>
 
-      <ul id="ulOutput">
+      <div id="taskList">
+        <ul id="tasks"></ul>
+      </div>
+
+      <!-- <ul id="ulOutput">
         <li>
           <p>
-            Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit. Autem itaque perferendis fugit aperiam.
-            Consectetur, nemo itaque. Eveniet nisi, deserunt at doloremque,
-            officia ad fugiat voluptatibus quaerat distinctio natus cupiditate
-            commodi.
+            Vero sunt magnam neque exercitationem ex rem consectetur aliquid laborum dolor molestias.
           </p>
         </li>
         <li>
           <p class="checked">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            at quidem deserunt aut odio veniam voluptatibus
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </li>
-      </ul>
+      </ul> -->
     </main>
-    <footer>
+    <!--  <footer>
       <div>
         <p id="devTo">Developed by: Lucas Eduardo Sasse - 2022</p>
       </div>
@@ -53,6 +55,6 @@
           >GitHub</a
         >
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>

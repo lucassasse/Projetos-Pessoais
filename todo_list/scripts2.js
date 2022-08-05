@@ -36,16 +36,6 @@ function printTasks() {
 }
 printTasks()
 
-function clearTasks() {
-  localStorage.clear()
-  location.reload()
-}
-
-//
-//
-//
-
-// Create a "close" button and append it to each list item
 function createDeleteButton() {
   let myTasklist = document.getElementsByTagName('li')
   for (i = 0; i < myTasklist.length; i++) {
@@ -55,20 +45,22 @@ function createDeleteButton() {
     span.appendChild(txt)
     myTasklist[i].appendChild(span)
   }
+  deleteTask()
 }
 
-// Click on a close button to hide the current list item
-function deleteTask() {}
-
-let close = document.getElementsByClassName('close')
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function () {
-    let div = this.parentElement
-    //Verificar posição do elemento clicado, atraves de uma varedora (forEach?) e deletar o item da mesma posição do array
-    //Atualizar a lista - printTasks()
-    
-    //console.log(div)
-    //div.remove()
-    //div.style.display = 'none'
+function deleteTask() {
+  let close = document.getElementsByClassName('close')
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function () {
+      let div = this.parentElement
+      div.parentElement.removeChild(div)
+      tasks.splice(tasks.indexOf(div.innerText.replace('X', '')), 1)
+      updateLocalStorage()
+    }
   }
+}
+
+function clearTasks() {
+  localStorage.clear()
+  location.reload()
 }

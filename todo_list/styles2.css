@@ -2,3 +2,7 @@
   cursor: pointer;
   background-color: red;
 }
+
+.checked {
+  text-decoration: line-through;
+}

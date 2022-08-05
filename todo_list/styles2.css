@@ -1,8 +1,35 @@
-.close{
-  cursor: pointer;
-  background-color: red;
+* {
+  text-align: center;
+  margin-left: auto;
 }
+
+ul{
+  padding: 0;
+  margin-left: 25%;
+  width: 50%;
+}
+
+li {
+  list-style: none;
+  background-color: antiquewhite;
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  padding: 7px;
+  font-size: 1.2em;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+
 
 .checked {
   text-decoration: line-through;
+}
+
+.close {
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0;
 }

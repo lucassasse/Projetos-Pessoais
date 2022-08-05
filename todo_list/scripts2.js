@@ -39,7 +39,7 @@ printTasks()
 function createDeleteButton() {
   let myTasklist = document.getElementsByTagName('li')
   for (i = 0; i < myTasklist.length; i++) {
-    var span = document.createElement('SPAN')
+    var span = document.createElement('button')
     var txt = document.createTextNode('X')
     span.className = 'close'
     span.appendChild(txt)
@@ -64,3 +64,15 @@ function clearTasks() {
   localStorage.clear()
   location.reload()
 }
+
+let list = document.querySelector('ul')
+console.log(list)
+list.addEventListener(
+  'click',
+  function (e) {
+    if (e.target.tagName === 'LI') {
+      e.target.classList.toggle('checked')
+    }
+  },
+  false
+)

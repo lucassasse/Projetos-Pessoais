@@ -4,7 +4,8 @@ function clearList() {
 }
 
 let tasks = []
-let inputTxt = document.getElementById('inputTxt')
+const inputTxt = document.getElementById('inputTxt')
+const ulList = document.getElementById('ulList')
 
 inputTxt.addEventListener('keypress', function (e) {
   if (e.key === 'Enter') {

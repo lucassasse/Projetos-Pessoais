@@ -1,162 +1,35 @@
-:root {
-  --wine: #401d10;
-  --white2: #f2f2f2;
-}
-
 * {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* ************** */
-/* HEADER */
-/* ************** */
-
-header {
-  background-color: var(--wine);
-  height: 10vh;
-  display: flex;
-  box-shadow: 0px 2px 4px -2px #00000073;
-}
-
-header h1 {
-  color: var(--white2);
-  border-radius: 5px;
-  min-width: 35%;
-  font-size: 8vh;
   text-align: center;
-  margin: auto;
-  padding: 2px 10px;
+  margin-left: auto;
 }
 
-/* ************** */
-/* MAIN */
-/* ************** */
-
-main {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+ul{
+  padding: 0;
+  margin-left: 25%;
+  width: 50%;
 }
 
-main #input {
-  margin: 25px;
-  height: 20px;
-  width: 300px;
-  padding: 10px;
-  font-size: 1.4em;
-  border-radius: 2px;
-  border: 1px var(--wine) solid;
-  box-shadow: 2px 2px 2px -2px #00000073;
-}
-
-main button {
-  color: var(--wine);
-  font-size: 1.4em;
-  margin: 25px;
+li {
+  list-style: none;
+  background-color: antiquewhite;
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+  border-radius: 3px;
   padding: 7px;
-  width: 120px;
-  border-radius: 2px;
-  border: 1px var(--wine) solid;
+  font-size: 1.2em;
   cursor: pointer;
-  box-shadow: 2px 2px 2px -2px #00000073;
-  transition: 0.3s;
-}
-
-main button:hover {
-  background-color: rgba(0, 0, 0, 0.199);
-}
-
-main ul {
-  color: var(--wine);
-  padding: 10px 20px;
-  width: 500px;
   display: flex;
-  flex-direction: column;
-}
-
-main ul li {
-  border: 1px solid var(--wine);
-  box-shadow: 2px 2px 2px -2px #00000073;
-  border-radius: 2px;
-  margin-bottom: 25px;
-  list-style-type: none;
-  box-shadow: 0px 8px 10px -5px #000000a9, -41px -47px 5px -4px rgba(0, 0, 0, 0);
-}
-
-main ul li{
-  display: flex;
-  flex-direction: row;
-  text-align: justify;
   justify-content: space-between;
-  align-items: center;
 }
 
-main ul li:hover{
-  background-color: rgba(128, 128, 128, 0.5);
-}
 
-ul p{
-  margin: 10px 20px;
-}
 
-ul p:hover {
-  cursor: pointer;
-}
-
-ul p.checked {
+.checked {
   text-decoration: line-through;
 }
 
 .close {
-  background-color: #f44336;
-  height: 15px;
-  padding: 6px 8px;
-  margin-right: 20px;
-  font-weight: bold;
-  border-radius: 2px;
-}
-
-.close:hover {
-  color: white;
   cursor: pointer;
-}
-
-/* ************** */
-/* FOOTER */
-/* ************** */
-
-footer {
-  background-color: var(--wine);
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  box-shadow: 0px -4px 4px -2px #00000073;
-}
-
-footer #devTo {
-  color: var(--white2);
-  font-size: 1.2em;
-  font-weight: bold;
-  padding: 10px;
-}
-
-footer #links {
-  display: flex;
-  font-weight: bold;
-}
-
-footer .button {
-  color: var(--white2);
-  width: 100%;
-  padding: 10px;
-  margin: 10px;
   text-decoration: none;
-  transition: 0.3s;
-}
-
-footer .button:hover {
-  color: black;
+  margin: 0;
 }

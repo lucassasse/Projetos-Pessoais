@@ -1,5 +1,13 @@
 let tasks = []
 
+sendEnter = document.getElementById('inputTxt')
+sendEnter.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    e.preventDefault()
+    getTask()
+  }
+})
+
 function getTask() {
   let inputTxt = document.getElementById('inputTxt')
 

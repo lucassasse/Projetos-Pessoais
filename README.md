@@ -18,6 +18,12 @@ Trata-se de aplicação onde o usuário insere um CNPJ e obtém como retorno, v�
 Projeto realizado para auxiliar nas buscas de informações sobre empresas devedoras, compilando as informações importantes e agilizando o trabalho dentro do escritório.
 (Realizado sem auxílio de curso).
 
+### conversores
+
+Trata-se de vários conservsores numéricos.
+Projeto realizado e em constante atualização, com fins de estudo envolvendo lógica e matemática.
+(Realizado sem auxílio de curso).
+
 ### estudos_gerais:
 
 Pasta para arquivos de testes sobre conteúdos diversos.
@@ -58,9 +64,15 @@ Projeto realizado com fins de prática de JavaScript e lógica.
 Site - Single page - Desenvolvido para amiga próxima, para fins de estudo e fixação de conhecimento.
 (Realizado com auxílio de curso)
 
-### todo_list - Em desenvolvimento
+### todo_list
 
 Projeto de lista de atividades, onde o usuário cadastra uma tarefa e/ou atividade ou lembrete.
 Após isso, o usuário poderá marcar a atividade como concluída e/ou excluí-la.
+(Realizado sem auxílio de curso).
+
+### todo_list_2 - Em desenvolvimento
+
+Projeto de lista de atividades, onde o usuário cadastra uma tarefa e/ou atividade ou lembrete.
+Após isso, o usuário poderá marcar a atividade como concluída, editá-la e/ou excluí-la.
 As atividades também se mantem salvas através do localStorage.
 (Realizado sem auxílio de curso).

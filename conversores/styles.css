@@ -1,0 +1,27 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+h1 {
+  width: 50%;
+  margin: 20px auto 50px;
+  border-bottom: 1px solid black;
+}
+
+h2 {
+  width: 20%;
+  margin: 20px auto 20px;
+  border-bottom: 1px solid black;
+}
+
+input,
+button {
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 5px;
+  margin-bottom: 10px;
+}

@@ -75,7 +75,7 @@ function deleteTask() {
       tasks.splice(tasks.indexOf(div.innerText.replace('X', '')), 1)
       //remover elemento do localStorage pela posição, ou id
       //chamar função exibir elementos dnv
-      //updateLocalStorage()
+      //updateLocalStorage().
     }
   }
 }

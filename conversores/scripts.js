@@ -49,11 +49,9 @@ function printResult(result, type) {
 */
 
 function toBinary(){
-  result = parseInt(decimalNumberInput.value).toString(2)
-  console.log(result)
+  document.getElementById('result').innerHTML = "Binary: " + parseInt(decimalNumberInput.value).toString(2)
 }
 
 function toOctal(){
-  result = parseInt(decimalNumberInput.value).toString(8)
-  console.log(result)
+  document.getElementById('result').innerHTML = "Octal: " + parseInt(decimalNumberInput.value).toString(8)
 }

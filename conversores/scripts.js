@@ -20,11 +20,6 @@ const decimalNumberInput = document.getElementById('inputDecimal')
   }
   console.log('result: ' + result)
   printResult(result, 1)
-}*/
-
-function toBinary(){
-  result = parseInt(decimalNumberInput.value).toString(2)
-  console.log(result)
 }
 
 function toOctal() {
@@ -50,4 +45,15 @@ function toOctal() {
 function printResult(result, type) {
   type = type == 1 ? 'Binary: ' : 'Octal: '
   document.getElementById('result').innerHTML = type + result.join('')
+}
+*/
+
+function toBinary(){
+  result = parseInt(decimalNumberInput.value).toString(2)
+  console.log(result)
+}
+
+function toOctal(){
+  result = parseInt(decimalNumberInput.value).toString(8)
+  console.log(result)
 }

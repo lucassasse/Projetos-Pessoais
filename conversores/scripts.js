@@ -55,3 +55,7 @@ function toBinary(){
 function toOctal(){
   document.getElementById('result').innerHTML = "Octal: " + parseInt(decimalNumberInput.value).toString(8)
 }
+
+function toHexadecimal(){
+  document.getElementById('result').innerHTML = "Octal: " + parseInt(decimalNumberInput.value).toString(16)
+}

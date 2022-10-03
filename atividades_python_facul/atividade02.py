@@ -23,7 +23,7 @@ print("O valor total da compra será de:", valor)
 #2) Faça um algoritmo que verifique se uma letra digitada é vogal ou consoante.
 letra = input("Digite uma letra para descobrir se a mesma é vogal ou consoante")
 if letra.isdigit():
-    print("Digite apenas numeros!")
+    print("Digite apenas letras!")
 elif letra == "a" or letra == "e" or letra == "i" or letra == "o" or letra == "u":
     print('A letra "' + letra + '" é uma vogal!')
 else:
@@ -74,6 +74,7 @@ numLista.append(int(input()))
 numLista.append(int(input()))
 print("O maior número é", min(numLista), "e o menor é:", max(numLista))
 '''
+'''
 #6) Faça um algoritmo que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.
 listaProdutos = ["Banana", "Laranja", "Maçã"]
 listaProdutosValor = []
@@ -81,8 +82,9 @@ listaProdutosValor.append(int(input("Qual o valor da " + listaProdutos[0])))
 listaProdutosValor.append(int(input("Qual o valor da " + listaProdutos[1])))
 listaProdutosValor.append(int(input("Qual o valor da " + listaProdutos[2])))
 result = min(listaProdutosValor)
+result = listaProdutosValor.index(min(listaProdutosValor))
 print("Você deve comprar", listaProdutos[result], "por ser o produto mais barato")
-print(min(listaProdutosValor))
+'''
 #7) Faça um algoritmo que leia três números e mostre-os em ordem decrescente.
 
 #8) Faça um algoritmo que leia um número e exiba o dia correspondente da semana.

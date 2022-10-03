@@ -13,6 +13,11 @@ valor = latas * 18
 #1 lata = 18 reais
 print("Você precesará de", latas, "para pintar", mtsQuadrados, "metros²")
 print("O valor total da compra será de:", valor)
+
+
+
+
+
 '''
 '''
 #2) Faça um algoritmo que verifique se uma letra digitada é vogal ou consoante.
@@ -60,10 +65,24 @@ elif numero3 > numero1 and numero3 > numero2:
 else:
     print("Há números iguais.")
 '''
+'''
 #5) Faça um algoritmo que leia três números e mostre o maior e o menor deles.
-
+print("Digite 3 números para saber qual o maior e qual o menor:")
+numLista = []
+numLista.append(int(input()))
+numLista.append(int(input()))
+numLista.append(int(input()))
+print("O maior número é", min(numLista), "e o menor é:", max(numLista))
+'''
 #6) Faça um algoritmo que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.
-
+listaProdutos = ["Banana", "Laranja", "Maçã"]
+listaProdutosValor = []
+listaProdutosValor.append(int(input("Qual o valor da " + listaProdutos[0])))
+listaProdutosValor.append(int(input("Qual o valor da " + listaProdutos[1])))
+listaProdutosValor.append(int(input("Qual o valor da " + listaProdutos[2])))
+result = min(listaProdutosValor)
+print("Você deve comprar", listaProdutos[result], "por ser o produto mais barato")
+print(min(listaProdutosValor))
 #7) Faça um algoritmo que leia três números e mostre-os em ordem decrescente.
 
 #8) Faça um algoritmo que leia um número e exiba o dia correspondente da semana.

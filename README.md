@@ -1,5 +1,9 @@
 # Projetos-Pessoais
 
+### atividades_python_facul
+
+Trata-se de uma pasta de arquivos de trabalhos realizados durante a materia de Lógica de Programação em Python.
+
 ### autocomplete_cep_api:
 
 Trata-se de aplicação onde o usuário insere um CEP e, utilizando da API, a aplicação preenche automaticamente diversos campos relacionados ao endereço correspondente.

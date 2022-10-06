@@ -1,24 +1,16 @@
-'''
-1) Faça um algoritmo para uma loja de tintas. O programa deverá pedir o tamanho em
-metros quadrados da área a ser pintada. Considere que a cobertura da tinta é de 1 litro para
-cada 3 metros quadrados e que a tinta é vendida em latas de 18 litros que custam R$ 80,00.
-Informe ao usuário a quantidade de latas de tinta a serem compradas e o preço total.
-'''
-'''
-mtsQuadrados = int(input("Quantos metros² você deseja pintar?"))
-latas = 
-valor = latas * 18
-#1 litro = 3 metros²
-#1 lata = 18 litros ou 6mts²
-#1 lata = 18 reais
-print("Você precesará de", latas, "para pintar", mtsQuadrados, "metros²")
-print("O valor total da compra será de:", valor)
+#1) Faça um algoritmo para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada.
+#Considere que a cobertura da tinta é de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de 18 litros que custam R$ 80,00.
+#Informe ao usuário a quantidade de latas de tinta a serem compradas e o preço total.
+mtsQuadrados = int(input("Quantos m²s você deseja pintar?"))
+litrosNecessários = mtsQuadrados / 3
+latas = litrosNecessários / 18
+if litrosNecessários % 18 != 0:
+    latas += .5
+    latas = round(latas)
+valor = latas * 80
+print("Você precisará de", latas, "lata(s) para pintar", mtsQuadrados, "m²s")
+print("O valor total da compra será de: R$", valor)
 
-
-
-
-'''
-'''
 #2) Faça um algoritmo que verifique se uma letra digitada é vogal ou consoante.
 letra = input("Digite uma letra para descobrir se a mesma é vogal ou consoante")
 if letra.isdigit():
@@ -103,7 +95,6 @@ print("O dia da semana é:", diaSemana[numDia-1])
 #Triângulo Equilátero: três lados iguais;
 #Triângulo Isósceles: quaisquer dois lados iguais;
 #Triângulo Escaleno: três lados diferentes
-
 print("Informe 3 medidas para descobrir qual tipo de triângulo se trata:")
 lados = []
 lados.append(int(input()))
@@ -126,4 +117,3 @@ if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
     print("O ano", ano, "é bissexto!")
 else:
     print("O ano", ano, "não é bissexto!")
-'''

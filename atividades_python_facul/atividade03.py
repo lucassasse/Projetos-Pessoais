@@ -74,6 +74,50 @@ Testar com as seguintes entradas: 326, 300, 100, 320, 310,305, 301, 101, 311, 11
 O programa deve estar em uma estrutura de repetição que só deve ser interrompida quando
 o usuário digitar um número menor que 0 (zero).
 '''
-numero = int(input("Qual o número a ser testado?"))
-while numero >= 0:
-    
+def calc(centena, dezena, unidade):
+    print(f"Nome: {nome}")
+
+numero = input("Digite um numero inteiro entre 0 e 1000:")
+unidade = numero[2]
+dezena = numero[1]
+centena = numero[0]
+print(unidade, dezena, centena)
+#while numero >= "0":
+if numero == "1000":
+    print("1 milhar, 0 centenas, 0 dezenas e 0 unidades")
+else:
+    print(f"{centena} centenas, {dezena} dezenas e {unidade} unidades")
+
+
+
+'''
+5) Faça um algoritmo para um caixa eletrônico. O programa deverá perguntar ao usuário o
+valor do saque e depois informar quantas notas de cada valor serão fornecidas. As notas
+disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo
+de 600 reais. O programa não deve se preocupar com a quantidade de notas existentes na
+máquina.
+a. Exemplo 1: Para sacar a quantia de 256 reais, o programa fornece duas notas de 100,
+uma nota de 50, uma nota de 5 e uma nota de 1;
+b. Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 100,
+uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
+'''
+'''
+6) Faça um algoritmo que peça um número inteiro e devolva a tabuada desse número. Ao
+final ele deve perguntar se você deseja fornecer um outro número, se sim uma nova
+tabuada deverá ser exibida, agora com um novo número também fornecido pelo usuário,
+caso contrário despeça-se do usuário e saia do programa.
+
+numInteiro = int(input("Digite um número inteiro para saber a tabuada deste número:"))
+valorBase = 1
+while valorBase <= 10:
+    resultado = numInteiro * valorBase
+    print(valorBase, "x", numInteiro, "=", resultado)
+    valorBase = valorBase + 1
+    if valorBase == 10:
+        pergunta = input("Você deseja realizar um novo cálculo? 'S' ou 'N'?")
+        if pergunta == "S":
+            int(input("Digite um número inteiro para saber a tabuada deste número:"))
+            valorBase = 1
+        else:
+            break
+'''

@@ -32,6 +32,9 @@ app.listen(8081, function () {
 })
 
 /*
+-Iniciar MySQL:
+mysql -h localhost -u root -p
+
 -Criar Banco da Dados:
 CREATE DATABASE;
 

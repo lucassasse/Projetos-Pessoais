@@ -73,20 +73,10 @@ Testar com as seguintes entradas: 326, 300, 100, 320, 310,305, 301, 101, 311, 11
 10, 21, 11, 1, 7 e 16
 O programa deve estar em uma estrutura de repetição que só deve ser interrompida quando
 o usuário digitar um número menor que 0 (zero).
-'''
-def calc(centena, dezena, unidade):
-    print(f"Nome: {nome}")
 
 numero = input("Digite um numero inteiro entre 0 e 1000:")
-unidade = numero[2]
-dezena = numero[1]
-centena = numero[0]
-print(unidade, dezena, centena)
-#while numero >= "0":
-if numero == "1000":
-    print("1 milhar, 0 centenas, 0 dezenas e 0 unidades")
-else:
-    print(f"{centena} centenas, {dezena} dezenas e {unidade} unidades")
+'''
+
 
 
 
@@ -100,7 +90,16 @@ a. Exemplo 1: Para sacar a quantia de 256 reais, o programa fornece duas notas d
 uma nota de 50, uma nota de 5 e uma nota de 1;
 b. Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 100,
 uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
+
+print("Bem vindo ao BP - Seu Banco Pessoal!")
+print("As notas disponíveis para saque são de R$ 1,00, R$ 5,00, R$ 10,00, R$ 50,00 e R$ 100,00")
+print("O valor mínimo para saque é de R$ 10,00 e o valor máximo é de R$ 600,00")
+valorSaque = float(input("Digite o valor do saque:"))
 '''
+
+
+
+
 '''
 6) Faça um algoritmo que peça um número inteiro e devolva a tabuada desse número. Ao
 final ele deve perguntar se você deseja fornecer um outro número, se sim uma nova

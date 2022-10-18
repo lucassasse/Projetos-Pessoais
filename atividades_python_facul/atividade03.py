@@ -76,7 +76,17 @@ o usuário digitar um número menor que 0 (zero).
 
 numero = input("Digite um numero inteiro entre 0 e 1000:")
 '''
-
+numInt = int(input("Dígite um número inteiro entre 0 e 1000"))
+while numInt >= 0:
+    if numInt == 0:
+        print("0 unidades")
+    elif numInt === 1000:
+        print("1 milhar, 0 centenas, 0 dezenas e 0 unidades")
+    elif numInt >0 and numInt < 10:
+        print("")
+    else:
+        print("Numero superior ao permitido")
+    numInt = int(input("Dígite um número inteiro entre 0 e 1000"))
 
 
 

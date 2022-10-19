@@ -124,12 +124,15 @@ a. Exemplo 1: Para sacar a quantia de 256 reais, o programa fornece duas notas d
 uma nota de 50, uma nota de 5 e uma nota de 1;
 b. Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 100,
 uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
-
+'''
 print("Bem vindo ao BP - Seu Banco Pessoal!")
 print("As notas disponíveis para saque são de R$ 1,00, R$ 5,00, R$ 10,00, R$ 50,00 e R$ 100,00")
 print("O valor mínimo para saque é de R$ 10,00 e o valor máximo é de R$ 600,00")
-valorSaque = float(input("Digite o valor do saque:"))
-'''
+valorSaque = int(input("Digite o valor do saque:"))
+if valorSaque < 10 or valorSaque > 600:
+    print("Lamentamos mas é impossível sacar este valor!")
+else:
+   print("")
 
 
 

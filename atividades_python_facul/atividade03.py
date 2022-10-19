@@ -74,23 +74,47 @@ Testar com as seguintes entradas: 326, 300, 100, 320, 310,305, 301, 101, 311, 11
 O programa deve estar em uma estrutura de repetição que só deve ser interrompida quando
 o usuário digitar um número menor que 0 (zero).
 
-numero = input("Digite um numero inteiro entre 0 e 1000:")
-'''
-numInt = int(input("Dígite um número inteiro entre 0 e 1000"))
+numInt = int(input("Dígite um número inteiro entre 0 e 999"))
 while numInt >= 0:
-    if numInt == 0:
-        print("0 unidades")
-    elif numInt === 1000:
-        print("1 milhar, 0 centenas, 0 dezenas e 0 unidades")
-    elif numInt >0 and numInt < 10:
-        print("")
+    unidade = numInt % 10
+    dezena = (numInt % 100) // 10
+    centena = numInt // 100
+    if numInt < 10:
+        if unidade <= 1:
+            print(f"{unidade} unidade")
+        else:
+            print(f"{unidade} unidades")
+    elif numInt < 100:
+        if dezena <= 1 and unidade <= 1:
+            print(f"{dezena} dezena e {unidade} unidade")
+        elif dezena > 1 and unidade > 1:
+            print(f"{dezena} dezenas e {unidade} unidades")
+        elif dezena <= 1 and unidade > 1:
+            print(f"{dezena} dezena e {unidade} unidades")
+        else:
+            print(f"{dezena} dezenas e {unidade} unidade")
+    elif numInt < 1000:
+        if centena <= 1 and dezena <= 1 and unidade <= 1:
+            print(f"{centena} centena, {dezena} dezena e {unidade} unidade")
+        elif centena > 1 and dezena > 1 and unidade > 1:
+            print(f"{centena} centenas, {dezena} dezenas e {unidade} unidades")
+        elif centena > 1 and dezena <= 1 and unidade <= 1:
+            print(f"{centena} centenas, {dezena} dezena e {unidade} unidade")
+        elif centena <= 1 and dezena > 1 and unidade <= 1:
+            print(f"{centena} centena, {dezena} dezenas e {unidade} unidade")
+        elif centena <= 1 and dezena <= 1 and unidade > 1:
+            print(f"{centena} centena, {dezena} dezena e {unidade} unidades")
+        elif centena > 1 and dezena > 1 and unidade <= 1:
+            print(f"{centena} centenas, {dezena} dezenas e {unidade} unidade")
+        elif centena <= 1 and dezena > 1 and unidade > 1:
+            print(f"{centena} centena, {dezena} dezenas e {unidade} unidades")
+        #elif centena > 1 and dezena <= 1 and unidade > 1:
+        else:
+            print(f"{centena} centenas, {dezena} dezena e {unidade} unidades")
     else:
         print("Numero superior ao permitido")
-    numInt = int(input("Dígite um número inteiro entre 0 e 1000"))
+    numInt = int(input("Dígite um número inteiro entre 0 e 999"))
 
-
-
-'''
 5) Faça um algoritmo para um caixa eletrônico. O programa deverá perguntar ao usuário o
 valor do saque e depois informar quantas notas de cada valor serão fornecidas. As notas
 disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo

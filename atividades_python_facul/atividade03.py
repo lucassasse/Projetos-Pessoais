@@ -129,13 +129,30 @@ print("Bem vindo ao BP - Seu Banco Pessoal!")
 print("As notas disponíveis para saque são de R$ 1,00, R$ 5,00, R$ 10,00, R$ 50,00 e R$ 100,00")
 print("O valor mínimo para saque é de R$ 10,00 e o valor máximo é de R$ 600,00")
 valorSaque = int(input("Digite o valor do saque:"))
+cedula100 = 0
+cedula50 = 0
+cedula10 = 0
+cedula5 = 0
+cedula1 = 0
 if valorSaque < 10 or valorSaque > 600:
     print("Lamentamos mas é impossível sacar este valor!")
 else:
-   print("")
-
-
-
+    while valorSaque > 100:
+       cedula100 += 1
+       valorSaque -= 100
+    while valorSaque > 50:
+       cedula50 += 1
+       valorSaque -= 50
+    while valorSaque > 10:
+       cedula10 += 1
+       valorSaque -= 10
+    while valorSaque > 5:
+       cedula5 += 1
+       valorSaque -= 5
+    while valorSaque >= 1:
+       cedula1 += 1
+       valorSaque -= 1
+print(f"cedulas de 100 = {cedula100}\n cedulas de 50 = {cedula50}\n cedulas de 10 = {cedula10}\n cedulas de 5 = {cedula5}\n cedulas de 1 = {cedula1}")
 
 '''
 6) Faça um algoritmo que peça um número inteiro e devolva a tabuada desse número. Ao

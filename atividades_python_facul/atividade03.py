@@ -6,7 +6,7 @@ uma multa de R$ 4,00 por quilo excedente. João precisa que você faça um progr
 leia a variável peso (peso de peixes) e calcule o excesso. Gravar no variável excesso a
 quantidade de quilos além do limite e na variável multa o valor da multa que João deverá
 pagar. Imprima os dados do programa com as mensagens adequadas.
-
+'''
 pesoPeixes = float(input("Quantos kg de peixes hoje patrão?"))
 excesso = pesoPeixes - 50
 if excesso >= 0:
@@ -16,8 +16,10 @@ if excesso >= 0:
 else:
     print("Sem multa hoje patrão!")
 
+'''
 2) Tendo como dado de entrada a altura (h) de uma pessoa,
 construa um algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas:
+'''
 a. Para homens: (72.7*h) – 58
 b. Para mulheres: (62.1*h) - 44.7
 altura = float(input("Qual sua altura?"))
@@ -29,6 +31,7 @@ else:
     pesoIdeal = (62.1 * altura) - 44.7
     print("Seu peso ideal é de:", pesoIdeal)
 
+'''
 3) Faça um algoritmo que leia as duas notas parciais obtidas por um aluno numa disciplina
 ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo:
 Média de Aproveitamento    Conceito
@@ -39,7 +42,7 @@ Entre 4.0 e 6.0               D
 Entre 4.0 e zero              E
 O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e a
 mensagem “APROVADO” se o conceito for A, B ou C ou “REPROVADO” se o conceito for D ou E.
-
+'''
 nota01 = float(input("Digíte a primeira nota:"))
 nota02 = float(input("Digíte a segunda nota:"))
 media = (nota01 + nota02) / 2
@@ -63,7 +66,7 @@ else:
     print("Sua primeira nota foi:", nota01, "A segunda nota foi:", nota02)
     print("Sua média foi de:", media, "e seu conceito foi: A")
     print('Você foi "APROVADO"')
-
+'''
 4) Faça um algoritmo que leia um número inteiro menor que 1000 e imprima a quantidade
 de centenas, dezenas e unidades do mesmo. Observando os termos no plural a colocação
 do "e", da vírgula entre outros. Exemplo:
@@ -73,7 +76,7 @@ Testar com as seguintes entradas: 326, 300, 100, 320, 310,305, 301, 101, 311, 11
 10, 21, 11, 1, 7 e 16
 O programa deve estar em uma estrutura de repetição que só deve ser interrompida quando
 o usuário digitar um número menor que 0 (zero).
-
+'''
 numInt = int(input("Dígite um número inteiro entre 0 e 999"))
 while numInt >= 0:
     unidade = numInt % 10
@@ -108,13 +111,12 @@ while numInt >= 0:
             print(f"{centena} centenas, {dezena} dezenas e {unidade} unidade")
         elif centena <= 1 and dezena > 1 and unidade > 1:
             print(f"{centena} centena, {dezena} dezenas e {unidade} unidades")
-        #elif centena > 1 and dezena <= 1 and unidade > 1:
         else:
             print(f"{centena} centenas, {dezena} dezena e {unidade} unidades")
     else:
         print("Numero superior ao permitido")
     numInt = int(input("Dígite um número inteiro entre 0 e 999"))
-
+'''
 5) Faça um algoritmo para um caixa eletrônico. O programa deverá perguntar ao usuário o
 valor do saque e depois informar quantas notas de cada valor serão fornecidas. As notas
 disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo
@@ -138,28 +140,36 @@ if valorSaque < 10 or valorSaque > 600:
     print("Lamentamos mas é impossível sacar este valor!")
 else:
     while valorSaque > 100:
-       cedula100 += 1
-       valorSaque -= 100
+        cedula100 += 1
+        valorSaque -= 100
+        if valorSaque < 100:
+            print(f"Cedulas de 100 = {cedula100}")
     while valorSaque > 50:
-       cedula50 += 1
-       valorSaque -= 50
+        cedula50 += 1
+        valorSaque -= 50
+        if valorSaque < 50:
+            print(f"Cedulas de 50 = {cedula50}")
     while valorSaque > 10:
-       cedula10 += 1
-       valorSaque -= 10
+        cedula10 += 1
+        valorSaque -= 10
+        if valorSaque < 10:
+            print(f"Cedulas de 10 = {cedula10}")
     while valorSaque > 5:
-       cedula5 += 1
-       valorSaque -= 5
+        cedula5 += 1
+        valorSaque -= 5
+        if valorSaque < 5:
+            print(f"Cedulas de 5 = {cedula5}")
     while valorSaque >= 1:
-       cedula1 += 1
-       valorSaque -= 1
-print(f"cedulas de 100 = {cedula100}\n cedulas de 50 = {cedula50}\n cedulas de 10 = {cedula10}\n cedulas de 5 = {cedula5}\n cedulas de 1 = {cedula1}")
-
+        cedula1 += 1
+        valorSaque -= 1
+        if valorSaque < 1:
+            print(f"Cedulas de 1 = {cedula1}")
 '''
 6) Faça um algoritmo que peça um número inteiro e devolva a tabuada desse número. Ao
 final ele deve perguntar se você deseja fornecer um outro número, se sim uma nova
 tabuada deverá ser exibida, agora com um novo número também fornecido pelo usuário,
 caso contrário despeça-se do usuário e saia do programa.
-
+'''
 numInteiro = int(input("Digite um número inteiro para saber a tabuada deste número:"))
 valorBase = 1
 while valorBase <= 10:
@@ -173,4 +183,3 @@ while valorBase <= 10:
             valorBase = 1
         else:
             break
-'''

@@ -3,6 +3,12 @@
 ### atividades_python_facul
 
 Trata-se de uma pasta de arquivos de trabalhos realizados durante a materia de Lógica de Programação em Python.
+(Realizado sem auxílio de curso).
+
+### aula_node
+
+Trata-se de uma pasta de estudos de NodeJS.
+(Realizado com auxílio de curso).
 
 ### autocomplete_cep_api:
 

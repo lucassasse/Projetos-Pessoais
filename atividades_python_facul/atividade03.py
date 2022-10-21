@@ -19,9 +19,9 @@ else:
 '''
 2) Tendo como dado de entrada a altura (h) de uma pessoa,
 construa um algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas:
-'''
 a. Para homens: (72.7*h) – 58
 b. Para mulheres: (62.1*h) - 44.7
+'''
 altura = float(input("Qual sua altura?"))
 genero = input("Qual seu gênero? masculino(m) ou feminíno(f)")
 if genero == 'm':
@@ -30,7 +30,6 @@ if genero == 'm':
 else:
     pesoIdeal = (62.1 * altura) - 44.7
     print("Seu peso ideal é de:", pesoIdeal)
-
 '''
 3) Faça um algoritmo que leia as duas notas parciais obtidas por um aluno numa disciplina
 ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo:

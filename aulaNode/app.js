@@ -68,9 +68,14 @@ INSERT INTO nomeDaTabela(nome, email, idade) VALUES(
 SELECT * FROM nomeDaTabela;
 
 -Listar Linha(s) da Tabela:
-SELECT * FROM nomeDaTabela WHERE idade >= 18;
-SELECT * FROM nomeDaTabela WHERE nome = "Lucas"
+SELECT * FROM nomeDaTabela WHERE idade >= 18;;
+SELECT * FROM nomeDaTabela WHERE nome = "Lucas";
 
 -Deletar Dado da Tabela
+DELETE FROM nomeDaTabela WHERE idade <= 18;
+DELETE FROM nomeDaTabela WHERE nome = "Andre";
 
+-Editar Dados da Tabela:
+UPDATE nomeDaTabela SET campoDado = "Alteração do Dado" WHERE campo = "Dado antigo";
+UPDATE NomeDaTabela SET email = "novo.email@email.com" WHERE email = "email.antigo@email.com";
 */

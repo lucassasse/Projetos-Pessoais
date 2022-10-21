@@ -2,11 +2,9 @@
 1) O fatorial de um número é a multiplicação desse número por todos os seus antecessores até chegar a 1. Por exemplo, o fatorial de 5 é 5*4*3*2*1 que é igual a 120.
 Faça uma função em python que dado um número inteiro positivo n, ela devolva o fatorial deste número. Teste com alguns números.
 
+import math
 def fatorial(num):
-    if num > 0:
-        
-            
-    fatorial(int(input("digite um número:")))
+    print(math.factorial(num))
 fatorial(int(input("digite um número:")))
 '''
 '''
@@ -16,13 +14,18 @@ conhecer seu termial e só interrompa quando ele digitar 0 (zero).
 
 def termial(num):
     if num > 0:
-        
-    termial(int(input("digite um número:")))
+        result = 0
+        while num > 0:
+            result += num
+            num -= 1
+        print(result)
+        termial(int(input("digite um número:")))
 termial(int(input("digite um número:")))
 '''
 '''
 #3) Construa uma função em python que dado um número ela retorne a tabuada desse número.
 #Novamente aqui permita que o usuário escolha qual tabuada deseja saber e só interrompa quando ele digitar um número negativo.
+
 def tabuada(num):
     i = 1
     if num >= 0:

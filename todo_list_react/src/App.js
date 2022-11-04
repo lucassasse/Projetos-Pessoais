@@ -13,10 +13,14 @@ function App(props) {
     />
   ))
 
+  function addTask(name) {
+    alert(name)
+  }
+
   return (
     <div className="todoapp stack-large">
-      <h1>TodoMatic</h1>
-      <Form />
+      <h1>Todo List - React</h1>
+      <Form addTask={addTask} />
       <div className="filters btn-group stack-exception">
         <FilterButton />
         <FilterButton />

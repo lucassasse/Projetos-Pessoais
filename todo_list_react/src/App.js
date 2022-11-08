@@ -17,6 +17,16 @@ function App(props) {
     setTasks(updateTasks)
   }
 
+  function editTask(id, newName) {
+    const editedTaskList = tasks.map(task => {
+      if (id === task.id) {
+        return { ...task, name: newName }
+      }
+      return task
+    })
+    setTasks(editedTaskList)
+  }
+
   function deleteTask(id) {
     const remainTasks = tasks.filter(task => id !== task.id)
     setTasks(remainTasks)
@@ -30,6 +40,7 @@ function App(props) {
       key={task.id}
       toggleTaskCompleted={toggleTaskCompleted}
       deleteTask={deleteTask}
+      editTask={editTask}
     />
   ))
 

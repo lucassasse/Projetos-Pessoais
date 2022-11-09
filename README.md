@@ -80,9 +80,9 @@ Projeto de lista de atividades, onde o usuário cadastra uma tarefa e/ou ativida
 Após isso, o usuário poderá marcar a atividade como concluída e/ou excluí-la.
 (Realizado sem auxílio de curso).
 
-### todo_list_2 - Em desenvolvimento
+### todo_list_react
 
-Projeto de lista de atividades, onde o usuário cadastra uma tarefa e/ou atividade ou lembrete.
+Projeto de lista de atividades em React, onde o usuário cadastra uma tarefa e/ou atividade ou lembrete.
 Após isso, o usuário poderá marcar a atividade como concluída, editá-la e/ou excluí-la.
-As atividades também se mantem salvas através do localStorage.
-(Realizado sem auxílio de curso).
+Também é possível filtar as tarefas por todas, ativas e concluídas.
+(Realizado com auxílio de curso).

@@ -38,10 +38,6 @@ body {
   border: 1px solid blue;
 }
 
-#blue:hover {
-  background-color: rgba(0, 0, 255, 0.5);
-}
-
 .blue2 {
   background-color: rgba(0, 0, 255, 0.3);
 }
@@ -54,10 +50,6 @@ body {
   border-radius: 0 0 0 100%;
   border: 1px solid yellow;
   margin-top: 5px;
-}
-
-#yellow:hover {
-  background-color: rgba(255, 255, 0, 0.5);
 }
 
 .yellow2 {
@@ -74,10 +66,6 @@ body {
   margin-top: 5px;
 }
 
-#red:hover {
-  background-color: rgba(255, 0, 0, 0.5);
-}
-
 .red2 {
   background-color: rgba(255, 0, 0, 0.3);
 }
@@ -89,10 +77,6 @@ body {
 #green {
   border-radius: 0 100% 0 0;
   border: 1px solid green;
-}
-
-#green:hover {
-  background-color: rgba(0, 255, 0, 0.5);
 }
 
 .green2 {

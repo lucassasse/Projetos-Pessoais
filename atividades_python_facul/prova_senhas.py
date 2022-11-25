@@ -1,9 +1,9 @@
 import random
-ranking = [["Lucas", 4], ["Marco", 7], ["Pedro", 8]]
+ranking = [[" ", 10], [" ", 10], [" ", 10]]
 jogadorAtual = []
 
 def rePlay():
-    print("Suas tentativas acabaram! Deseja Jogar novamente?")
+    print("Deseja Jogar novamente?")
     escolha = input("1 - Sim, mesmo jogador! | 2 - Sim, outro jogador! | 3 - Não!")
     if escolha == "1":
         sortearNumeros()
@@ -28,31 +28,56 @@ def sortearNumeros():
         if numSorteado not in numerosSorteados:
             numerosSorteados.append(numSorteado)
     print(numerosSorteados)
-    chutes(numerosSorteados)
-    
-def chutes(numerosSorteados):
     tentativas = 0
-    while tentativas < 3:
+    chutes(numerosSorteados, tentativas)
+    
+def chutes(numerosSorteados, tentativas):
+    while tentativas < 3: #mudar par 10
+        tentativas += 1
         chute = input("Digite 4 números ou 'sair'")
         if chute == "sair":
             print("Você desistiu! Os números sorteados eram: ", numerosSorteados)
             break
+        elif len(chute) < 3 or len(chute) > 4:
+            print("Chute inválido.")
         else:
-            tentativas += 1
-            verificacao(chute)
-    if tentativas == 10:
-        fimDeJogo()
+            verificacao(chute, numerosSorteados, tentativas)
+    if tentativas == 3: #mudar par 10
+        print("Lamento, suas tentativas acabaram.")
+        fimDeJogo(tentativas)
 
-def verificacao(chute):
-    print(chute)
+def verificacao(chute, numerosSorteados, tentativas):
+    listaNumerosChute = []
+    for x in chute:
+        listaNumerosChute.append(int(x))
+    if numerosSorteados == listaNumerosChute:
+        print("Parabéns, você acertou! Os números eram: ", numerosSorteados)
+        fimDeJogo(tentativas)
+    else:
+        numerosColocados = 0
+        numerosDeslocados = 0
+        cont = 0
+        while cont < 3:
+            if numerosSorteados[cont] == int(listaNumerosChute[cont]):
+                numerosColocados += 1
+            cont += 1
+            
+        print("Você acertou ", numerosColocados, " numeros colocados e ", numerosDeslocados, " numeros deslocados")
+        chutes(numerosSorteados, tentativas)
     
 def fimDeJogo(tentativas):
     print("Seu total de tentativas foi de: ", tentativas)
     jogadorAtual.append(tentativas)
-    rank()
+    #rank(tentativas)
 
-def rank():
+def rank(tentativas):
+    ranking.sort()
+    cont = 0
+    while cont < 3:
+        if jogadorAtual[1] < ranking[cont][1]:
+            ranking[cont].append(jogadorAtual[1])
     print(jogadorAtual)
+    print(ranking)
     rePlay()
 
 novoJogador()

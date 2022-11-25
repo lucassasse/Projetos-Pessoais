@@ -32,17 +32,16 @@ def sortearNumeros():
     chutes(numerosSorteados, tentativas)
     
 def chutes(numerosSorteados, tentativas):
-    while tentativas < 3: #mudar par 10
-        tentativas += 1
+    if tentativas < 3: #mudar para 10
         chute = input("Digite 4 números ou 'sair'")
         if chute == "sair":
             print("Você desistiu! Os números sorteados eram: ", numerosSorteados)
-            break
-        elif len(chute) < 3 or len(chute) > 4:
+        elif len(chute) < 4 or len(chute) > 4:
             print("Chute inválido.")
         else:
+            tentativas += 1
             verificacao(chute, numerosSorteados, tentativas)
-    if tentativas == 3: #mudar par 10
+    else:
         print("Lamento, suas tentativas acabaram.")
         fimDeJogo(tentativas)
 
@@ -68,7 +67,7 @@ def verificacao(chute, numerosSorteados, tentativas):
 def fimDeJogo(tentativas):
     print("Seu total de tentativas foi de: ", tentativas)
     jogadorAtual.append(tentativas)
-    #rank(tentativas)
+    rank(tentativas)
 
 def rank(tentativas):
     ranking.sort()
@@ -76,6 +75,7 @@ def rank(tentativas):
     while cont < 3:
         if jogadorAtual[1] < ranking[cont][1]:
             ranking[cont].append(jogadorAtual[1])
+            cont += 1
     print(jogadorAtual)
     print(ranking)
     rePlay()

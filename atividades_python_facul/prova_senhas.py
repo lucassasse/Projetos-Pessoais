@@ -1,7 +1,6 @@
 import random
 
 ranking = [[10, " "], [10, " "], [10, " "]]
-# ranking = []
 jogadorAtual = []
 
 def rePlay(jogadorAtual):
@@ -25,13 +24,13 @@ def novoJogador():
     sortearNumeros()
 
 def sortearNumeros():
+    tentativas = 0
     numerosSorteados = []
     while len(numerosSorteados) < 4:
         numSorteado = random.randint(1, 6)
         if numSorteado not in numerosSorteados:
             numerosSorteados.append(numSorteado)
     print(numerosSorteados)
-    tentativas = 0
     chutes(numerosSorteados, tentativas)
 
 def chutes(numerosSorteados, tentativas):
@@ -79,15 +78,23 @@ def fimDeJogo(tentativas):
 def rank():
     ranking.sort()
     cont = 0
+    jogadorAtualissimo = jogadorAtual.copy()
     while cont < len(ranking):
-        if ranking[cont][0] >= jogadorAtual[0]:
-            ranking.insert(cont, jogadorAtual)
-            if len(ranking) > 3:
-                ranking.pop()
+        if jogadorAtual[0] <= ranking[cont][0]:
+            ranking.insert(cont, jogadorAtualissimo)
             break
         else:
             cont += 1
-    print(ranking)
+    if len(ranking) > 3:
+        ranking.pop()
+    rankingPrint = []
+    for x in ranking:
+        if x[1] != " ":
+            rankingPrint.append(x)
+    cont = 0
+    while len(rankingPrint) > cont:
+        print(cont+1, "º Jogador: ", rankingPrint[cont][1], "- tentativas: " , rankingPrint[cont][0])
+        cont +=1
     rePlay(jogadorAtual)
 
 novoJogador()

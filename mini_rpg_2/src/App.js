@@ -1,14 +1,19 @@
+import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+
+import Header from './components/Header'
+import Routes from './components/Routes'
+import Stats from './components/Stats'
+
 import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit and save to reload!
-        </p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Stats />
+      <Routes />
+    </BrowserRouter>
   )
 }
 

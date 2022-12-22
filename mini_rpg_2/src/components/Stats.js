@@ -1,30 +1,28 @@
 import React, { useState } from 'react'
 
+const player = {
+  life: 10,
+  money: 20,
+  stamina: 10,
+  strength: 15
+}
 
+const Stats = () => {
+  const [data, setData] = useState(player)
 
-const Stats = ({ Rest }) => {
-  const [life, setLife] = useState(10)
-  const [money, setMoney] = useState(20)
-  const [stamina, setStamina] = useState(10)
-  const [strength, setStrength] = useState(10)
-  
-  function funcAumentarVida() {
-    setLife(life + {Rest})
-  }
-  /*
-  function funcDiminuirVida() {
-    setLife(life - 5)
-  }*/
+  //const [life, setLife] = useState(10)
+  //const [money, setMoney] = useState(20)
+  //const [stamina, setStamina] = useState(10)
+  //const [strength, setStrength] = useState(10)
 
   return (
     <div>
       <nav>
         <ul>
-          <li>{Rest}</li>
-          <li>Life: {life}</li>
-          <li>Money: {money}</li>
-          <li>Stamina: {stamina}</li>
-          <li>Strength: {strength}</li>
+          <li>Life: {data.life}</li>
+          <li>Money: {player.money}</li>
+          <li>Stamina: {player.stamina}</li>
+          <li>Strength: {player.strength}</li>
         </ul>
       </nav>
     </div>

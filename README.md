@@ -28,12 +28,6 @@ Trata-se de aplicação onde o usuário insere um CNPJ e obtém como retorno, v�
 Projeto realizado para auxiliar nas buscas de informações sobre empresas devedoras, compilando as informações importantes e agilizando o trabalho dentro do escritório.
 (Realizado sem auxílio de curso).
 
-### conversores
-
-Trata-se de vários conservsores numéricos.
-Projeto realizado e em constante atualização, com fins de estudo envolvendo lógica e matemática.
-(Realizado sem auxílio de curso).
-
 ### estudos_gerais:
 
 Pasta para arquivos de testes sobre conteúdos diversos.
@@ -44,12 +38,6 @@ Pasta para arquivos de testes sobre conteúdos diversos.
 Trata-se de estudo e criação de aplicação de cadastro de pagamentos, com possibilidade de leitura, edição e remoção dos mesmos (CRUD).
 Projeto realizado para fixação de conhecimento sobre NodeJS e MySQL.
 (Realizado com auxílio de curso).
-
-### estudos_react
-
-Trata-se de aplicação para cadastro e controle financeiro de projetos, onde o usuário cadastra o projeto e define um custo para o mesmo. Após este cadastro, o usuário poderá editá-lo, ou então, adicionar serviços ao mesmo, adicionando valores a estes. Assim, haverá controle financeiro sobre todos os serviços realizados sobre o projeto cadastrado.
-Projeto realizado para fixação de conhecimento sobre React.
-(Realizado com auxílio de curso)
 
 ### jogo_da_forca
 
@@ -68,6 +56,22 @@ Projeto realizado com fins de prática de JavaScript e lógica.
 Trata-se de um mini RPG, onde o usuário deve administrar seus status de vida e recursos.
 Projeto realizado com fins de prática de JavaScript e lógica.
 (Realizado sem auxílio de curso)
+
+### react_cadastro_e_edicao
+
+Trata-se de aplicação para cadastro e controle financeiro de projetos, onde o usuário cadastra o projeto e define um custo para o mesmo. Após este cadastro, o usuário poderá editá-lo, ou então, adicionar serviços ao mesmo, adicionando valores a estes. Assim, haverá controle financeiro sobre todos os serviços realizados sobre o projeto cadastrado.
+Projeto realizado para fixação de conhecimento sobre React.
+(Realizado com auxílio de curso)
+
+### react_formulario_loguin
+
+Trata-se de um desafio de nível jr. desenvolvido em react. O usuário deve preencher alguns requisitos para efetuar o loguin.
+(Realizado com auxílio de curso)
+
+### react_formulario_multistep
+
+Trata-se de um formulário de multiplas etapas, onde o usuário deverá preencher determinados campos, afim de avaliar um determinado produto/atendimento.
+(realizado com auxílio de curso)
 
 ### site_psico_pamela
 

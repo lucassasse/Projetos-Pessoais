@@ -63,9 +63,24 @@ Trata-se de aplicação para cadastro e controle financeiro de projetos, onde o 
 Projeto realizado para fixação de conhecimento sobre React.
 (Realizado com auxílio de curso)
 
-### react_formulario_loguin
+### react_challange_dots
 
-Trata-se de um desafio de nível jr. desenvolvido em react. O usuário deve preencher alguns requisitos para efetuar o loguin.
+Trata-se de um desafio de nível jr. desenvolvido em react. A applicação renderiza um ponto no local do clique do usuário. Além disso, há 2 botões, possuindo as funções de desfazer e refazer os pontos renderizados, respectivamente.
+(Realizado com auxílio de curso)
+
+### react_challange_forms
+
+Trata-se de um desafio de nível jr. desenvolvido em react. A aplicação trata-se de um formulário, onde todos os campos devem estar preenchidos para que o usuário possa efetuar o login. Além disso, a aplicação possui alguns filtros e mostra uma barra de progresso, que aumenta ou diminui conforme o formulário é preenchido.
+(Realizado com auxílio de curso)
+
+### react_challange_consumo_api
+
+Trata-se de um desafio de nível jr. desenvolvido em react. A aplicação desenvolvida trás a utilização de uma API e renderiza certas informações na tela, em ordem alfabética.
+(Realizado com auxílio de curso)
+
+### react_formulario_login
+
+Trata-se de um desafio de nível jr. desenvolvido em react. O usuário deve preencher alguns requisitos para liberar e efetuar o login.
 (Realizado com auxílio de curso)
 
 ### react_formulario_multistep

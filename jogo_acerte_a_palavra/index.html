@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <title>Acerte a Palavra</title>
+  </head>
+  <body>
+    <h1>Acerte a Palavra:</h1>
+    <h3>Dica: São 5 letras</h3>
+    <p>Verde: Acertou a letra e a posição</p>
+    <p>Vermelho: Errou a letra ou posição</p>
+    <hr />
+    <div>
+      <input
+        type="text"
+        maxlength="1"
+        class="inputLetra"
+        id="inputLetra0"
+        autofocus
+      />
+      <input type="text" maxlength="1" id="inputLetra1" />
+      <input type="text" maxlength="1" id="inputLetra2" />
+      <input type="text" maxlength="1" id="inputLetra3" />
+      <input type="text" maxlength="1" id="inputLetra4" />
+    </div>
+    <br />
+    <div id="outputResult"></div>
+  </body>
+</html>

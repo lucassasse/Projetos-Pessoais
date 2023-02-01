@@ -39,6 +39,12 @@ Trata-se de estudo e criação de aplicação de cadastro de pagamentos, com pos
 Projeto realizado para fixação de conhecimento sobre NodeJS e MySQL.
 (Realizado com auxílio de curso).
 
+### jogo_acerte_a_palavra
+
+Trata-se de um jogo simples, onde o usuário digita 5 letras, 1 por 1, e o sistema aponta quais letras estão no local certo.
+Projeto realizado com fins de prática de JavaScript e lógica.
+(Realizado sem auxílio de curso)
+
 ### jogo_da_forca
 
 Trata-se do clássico jogo da forca.
@@ -71,6 +77,11 @@ Trata-se de um desafio de nível jr. desenvolvido em react. A applicação rende
 ### react_challange_forms
 
 Trata-se de um desafio de nível jr. desenvolvido em react. A aplicação trata-se de um formulário, onde todos os campos devem estar preenchidos para que o usuário possa efetuar o login. Além disso, a aplicação possui alguns filtros e mostra uma barra de progresso, que aumenta ou diminui conforme o formulário é preenchido.
+(Realizado com auxílio de curso)
+
+### react_challange_tictactoe
+
+Trata-se de um desafio de nível pleno desenvolvido em react. Trata-se de um jogo da velha.
 (Realizado com auxílio de curso)
 
 ### react_challange_consumo_api

@@ -1,17 +1,17 @@
 import { Link } from 'react-router-dom'
 
-export const Header = ({ life }) => {
+export const Header = ({ player }) => {
   return (
-    <div>
+    <header>
       <div>
         <Link to="/">Home</Link>
         <br />
         <Link to="/store">Store</Link>
       </div>
       <div>
-        <h3>Life: {life}</h3>
-        <h3>Money: {}</h3>
+        <p>Food: {player.food}</p>
+        <p>Money: {player.money}</p>
       </div>
-    </div>
+    </header>
   )
 }

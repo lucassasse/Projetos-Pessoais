@@ -2,21 +2,42 @@ import React, { useEffect, useState } from 'react'
 import { Header } from '../components/Header'
 
 export const Store = () => {
-  const [life, setLife] = useState(() => {
-    const lifeFromLocalStorage = localStorage.getItem('life')
-    return lifeFromLocalStorage ? parseInt(lifeFromLocalStorage) : 0
+  const [player, setPlayer] = useState(() => {
+    const playerFromLocalStorage = localStorage.getItem('player')
+    return playerFromLocalStorage
+      ? JSON.parse(playerFromLocalStorage)
+      : { life: 10, food: 10, strength: 5, money: 10 }
   })
 
   useEffect(() => {
-    localStorage.setItem('life', life)
-  }, [life])
+    localStorage.setItem('player', JSON.stringify(player))
+  }, [player])
 
   return (
     <div>
-      <Header life={life} />
+      <Header player={player} />
       <h1>STORE</h1>
-      <button onClick={() => setLife(life + 1)}>Add Life</button>
-      <button>Add Money</button>
+      <button
+        onClick={() => {
+          setPlayer({
+            ...player,
+            food: player.food + 1,
+            money: player.money - 1
+          })
+        }}
+      >
+        Comprar comida
+      </button>
+      <button
+        onClick={() => {
+          setPlayer({
+            ...player,
+            food: player.food - 1
+          })
+        }}
+      >
+        Comer
+      </button>
     </div>
   )
 }

@@ -63,6 +63,12 @@ Trata-se de um mini RPG, onde o usuário deve administrar seus status de vida e 
 Projeto realizado com fins de prática de JavaScript e lógica.
 (Realizado sem auxílio de curso)
 
+### mini_rpg_2
+
+Trata-se de um mini RPG, onde o usuário deve administrar seus status de vida e recursos.
+Projeto realizado com fins de prática de React.
+(Realizado sem auxílio de curso)
+
 ### react_cadastro_e_edicao
 
 Trata-se de aplicação para cadastro e controle financeiro de projetos, onde o usuário cadastra o projeto e define um custo para o mesmo. Após este cadastro, o usuário poderá editá-lo, ou então, adicionar serviços ao mesmo, adicionando valores a estes. Assim, haverá controle financeiro sobre todos os serviços realizados sobre o projeto cadastrado.
@@ -97,6 +103,11 @@ Trata-se de um desafio de nível jr. desenvolvido em react. O usuário deve pree
 ### react_formulario_multistep
 
 Trata-se de um formulário de multiplas etapas, onde o usuário deverá preencher determinados campos, afim de avaliar um determinado produto/atendimento.
+(realizado com auxílio de curso)
+
+### react_projeto_loja
+
+Trata-se de uma pagina web simulando uma loja de celulares. É feita utilizando uma API do Mercado Livre, onde são listados vários aparelhos e o usuário pode adicionar e retirar os mesmos de um carrinho, que fica em outra página e mostra o preço total dos produtos adicionados.
 (realizado com auxílio de curso)
 
 ### site_psico_pamela

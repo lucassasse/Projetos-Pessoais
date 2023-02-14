@@ -13,31 +13,21 @@ export const Store = () => {
     localStorage.setItem('player', JSON.stringify(player))
   }, [player])
 
+  const buyFood = () => {
+    if (player.money > 0) {
+      setPlayer({
+        ...player,
+        food: player.food + 1,
+        money: player.money - 1
+      })
+    }
+  }
+
   return (
     <div>
       <Header player={player} />
       <h1>STORE</h1>
-      <button
-        onClick={() => {
-          setPlayer({
-            ...player,
-            food: player.food + 1,
-            money: player.money - 1
-          })
-        }}
-      >
-        Comprar comida
-      </button>
-      <button
-        onClick={() => {
-          setPlayer({
-            ...player,
-            food: player.food - 1
-          })
-        }}
-      >
-        Comer
-      </button>
+      <button onClick={buyFood}>Buy food</button>
     </div>
   )
 }

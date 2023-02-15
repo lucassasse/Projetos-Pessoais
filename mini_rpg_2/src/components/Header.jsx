@@ -1,16 +1,22 @@
 import { Link } from 'react-router-dom'
+import '../styles/Header.css'
 
 export const Header = ({ player }) => {
   return (
     <header>
       <div>
-        <Link to="/">Home</Link>
-        <br />
-        <Link to="/store">Store</Link>
-        <br />
-        <Link to="/gym">Gym</Link>
-        <br />
-        <Link to="/work">Work</Link>
+        <button>
+          <Link to="/">Home</Link>
+        </button>
+        <button>
+          <Link to="/store">Store</Link>
+        </button>
+        <button>
+          <Link to="/gym">Gym</Link>
+        </button>
+        <button>
+          <Link to="/work">Work</Link>
+        </button>
       </div>
       <div>
         <p>Life: {player.life}</p>

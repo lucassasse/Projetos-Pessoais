@@ -3,27 +3,27 @@ import '../styles/Header.css'
 
 export const Header = ({ player }) => {
   return (
-    <header>
-      <div>
-        <button>
-          <Link to="/">Home</Link>
-        </button>
-        <button>
-          <Link to="/store">Store</Link>
-        </button>
-        <button>
-          <Link to="/gym">Gym</Link>
-        </button>
-        <button>
-          <Link to="/work">Work</Link>
-        </button>
+    <div className="container">
+      <div className="header">
+        <Link className="btn" to="/">
+          Home
+        </Link>
+        <Link className="btn" to="/store">
+          Store
+        </Link>
+        <Link className="btn" to="/gym">
+          Gym
+        </Link>
+        <Link className="btn" to="/work">
+          Work
+        </Link>
       </div>
-      <div>
-        <p>Life: {player.life}</p>
-        <p>Food: {player.food}</p>
-        <p>Strength: {player.strength}</p>
-        <p>Money: {player.money}</p>
+      <div className="phrase-container">
+        <p className="phrase">Life: {player.life}</p>
+        <p className="phrase">Food: {player.food}</p>
+        <p className="phrase">Strength: {player.strength}</p>
+        <p className="phrase">Money: {player.money}</p>
       </div>
-    </header>
+    </div>
   )
 }

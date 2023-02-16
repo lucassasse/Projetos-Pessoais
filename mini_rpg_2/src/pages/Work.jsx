@@ -1,17 +1,9 @@
-import React, { useEffect, useState } from 'react'
 import { Header } from '../components/Header'
+import { usePlayer } from '../components/usePlayer'
+import '../styles/Main.css'
 
 export const Work = () => {
-  const [player, setPlayer] = useState(() => {
-    const playerFromLocalStorage = localStorage.getItem('player')
-    return playerFromLocalStorage
-      ? JSON.parse(playerFromLocalStorage)
-      : { life: 10, food: 10, strength: 5, money: 10 }
-  })
-
-  useEffect(() => {
-    localStorage.setItem('player', JSON.stringify(player))
-  }, [player])
+  const { player, setPlayer } = usePlayer()
 
   const work = () => {
     if (player.life > 1) {
@@ -30,8 +22,10 @@ export const Work = () => {
   return (
     <div>
       <Header player={player} />
-      <h1>WORK</h1>
-      <button onClick={work}>Work</button>
+      <h1 className="title">WORK</h1>
+      <button className="button" onClick={work}>
+        Work
+      </button>
     </div>
   )
 }

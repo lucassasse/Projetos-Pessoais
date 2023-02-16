@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
+import { usePlayer } from './usePlayer'
 import '../styles/Header.css'
 
-export const Header = ({ player }) => {
+export const Header = () => {
+  const { player } = usePlayer()
+
   return (
     <div className="container">
       <div className="header">
@@ -16,6 +19,9 @@ export const Header = ({ player }) => {
         </Link>
         <Link className="btn" to="/work">
           Work
+        </Link>
+        <Link className="btn" to="/forest">
+          Forest
         </Link>
       </div>
       <div className="phrase-container">

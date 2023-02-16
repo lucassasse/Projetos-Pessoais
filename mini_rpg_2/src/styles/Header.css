@@ -41,7 +41,7 @@
 .btn:hover {
   background-color: #f2af4d;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-  transform: translateY(-5px);
+  transform: translateY(-2px);
 }
 
 .phrase-container {
@@ -68,10 +68,4 @@
   font-size: 16px;
   cursor: default;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.phrase:hover {
-  background-color: #f2af4d;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-  transform: translateY(-5px);
 }

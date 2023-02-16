@@ -1,17 +1,9 @@
-import React, { useEffect, useState } from 'react'
 import { Header } from '../components/Header'
+import { usePlayer } from '../components/usePlayer'
+import '../styles/Main.css'
 
 export const Home = () => {
-  const [player, setPlayer] = useState(() => {
-    const playerFromLocalStorage = localStorage.getItem('player')
-    return playerFromLocalStorage
-      ? JSON.parse(playerFromLocalStorage)
-      : { life: 10, food: 10, strength: 5, money: 10 }
-  })
-
-  useEffect(() => {
-    localStorage.setItem('player', JSON.stringify(player))
-  }, [player])
+  const { player, setPlayer } = usePlayer()
 
   const eat = () => {
     if (player.food > 0) {
@@ -25,9 +17,11 @@ export const Home = () => {
 
   return (
     <div>
-      <Header player={player} />
-      <h1>HOME</h1>
-      <button onClick={eat}>Eat</button>
+      <Header />
+      <h1 className="title">HOME</h1>
+      <button className="button" onClick={eat} disabled={player.food <= 0}>
+        Eat
+      </button>
     </div>
   )
 }

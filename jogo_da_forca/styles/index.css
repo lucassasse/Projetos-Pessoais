@@ -1,36 +1,126 @@
-* {
+/* Estilos do corpo da página */
+body {
   font-family: 'Roboto', sans-serif;
-  text-align: center;
-  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
-div {
-  margin: 25px;
+/* Estilos do cabeçalho */
+#header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
 }
 
-#word_underline {
-  letter-spacing: 0.5rem;
+#header h1 {
+  margin: 0;
 }
 
-#used_letters {
-  letter-spacing: 0.2rem;
-}
-
-img {
-  width: 100px;
-}
-
+/* Estilos do conteúdo principal */
 #main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
-#cima,
+#main h3 {
+  margin-top: 0;
+}
+
+/* Estilos dos elementos de cima */
+#cima {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#cadastroPalavra,
+#cadastroLetra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+#cadastroPalavra input,
+#cadastroLetra input {
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#buttonSave,
+#buttonLetter {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+#buttonSave:hover,
+#buttonLetter:hover {
+  background-color: #555;
+}
+
+/* Estilos dos elementos de baixo */
 #baixo {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#palavraCadastrada,
+#letrasUsadas {
+  margin-right: 20px;
+}
+
+#palavraCadastrada p,
+#letrasUsadas p {
+  margin: 0;
+  font-size: 24px;
+}
+
+#palavraCadastrada #tip {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+#letrasUsadas #used_letters {
+  font-size: 16px;
+}
+
+/* Estilos da imagem da forca */
+#imagemDiv {
+  margin-top: 20px;
+}
+
+#imagem {
+  max-width: 100%;
+}
+
+/* Estilos do rodapé */
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 #reset {
-  width: 200px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+#reset:hover {
+  background-color: #555;
 }

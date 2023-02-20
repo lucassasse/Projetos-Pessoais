@@ -9,25 +9,13 @@ import {
 export const PlayerContext = createContext()
 
 export const PlayerProvider = ({ children }) => {
-  const [inventory, setInventory] = useState({
-    knife: 5,
-    sword: 3,
-    waterGun: 0,
-    gun: 2
-  })
-
-  const updateInventory = useCallback(newInventory => {
-    setInventory(newInventory)
-    localStorage.setItem('inventory', JSON.stringify(newInventory))
-  }, [])
-
   const [player, setPlayer] = useState({
     life: 10,
     food: 10,
     strength: 5,
-    money: 10,
+    money: 250,
     stamina: 5,
-    inventory: inventory
+    inventory: { knife: 0, sword: 0, waterGun: 0, gun: 0 }
   })
 
   useEffect(() => {
@@ -47,9 +35,7 @@ export const PlayerProvider = ({ children }) => {
     <PlayerContext.Provider
       value={{
         player,
-        setPlayer: updatePlayer,
-        inventory,
-        setInventory: updateInventory
+        setPlayer: updatePlayer
       }}
     >
       {children}

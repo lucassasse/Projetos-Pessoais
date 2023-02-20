@@ -15,12 +15,68 @@ export const Store = () => {
     }
   }
 
+  const buyKnife = () => {
+    if (player.money >= 5) {
+      setPlayer({
+        ...player,
+        money: player.money - 5,
+        inventory: { ...player.inventory, knife: player.inventory.knife + 1 }
+      })
+    }
+  }
+
+  const buySword = () => {
+    if (player.money >= 15) {
+      setPlayer({
+        ...player,
+        money: player.money - 15,
+        inventory: { ...player.inventory, sword: player.inventory.sword + 1 }
+      })
+    }
+  }
+
+  const buyWaterGun = () => {
+    if (player.money >= 25) {
+      setPlayer({
+        ...player,
+        money: player.money - 25,
+        inventory: { ...player.inventory, waterGun: player.inventory.waterGun + 1 }
+      })
+    }
+  }
+
+  const buyGun = () => {
+    if (player.money >= 50) {
+      setPlayer({
+        ...player,
+        money: player.money - 50,
+        inventory: { ...player.inventory, gun: player.inventory.gun + 1 }
+      })
+    }
+  }
+
   return (
     <div>
       <Header player={player} />
-      <h1 className="title" >STORE</h1>
+      <h1 className="title">STORE</h1>
       <button className="button" onClick={buyFood} disabled={player.money <= 0}>
         Buy food
+      </button>
+      <button className="button" onClick={buyKnife} disabled={player.money < 5}>
+        Buy Knife
+      </button>
+      <button className="button" onClick={buySword} disabled={player.money < 5}>
+        Buy Sword
+      </button>
+      <button
+        className="button"
+        onClick={buyWaterGun}
+        disabled={player.money < 5}
+      >
+        Buy Water Gun
+      </button>
+      <button className="button" onClick={buyGun} disabled={player.money < 5}>
+        Buy Gun
       </button>
     </div>
   )

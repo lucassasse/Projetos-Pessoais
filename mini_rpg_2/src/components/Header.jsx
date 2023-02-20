@@ -3,7 +3,7 @@ import { usePlayer } from './usePlayer'
 import '../styles/Header.css'
 
 export const Header = () => {
-  const { player, inventory } = usePlayer()
+  const { player } = usePlayer()
 
   return (
     <div className="container">
@@ -13,13 +13,19 @@ export const Header = () => {
         <p className="phrase">Strength: {player.strength}</p>
         <p className="phrase">Money: {player.money}</p>
         <p className="phrase">Stamina: {player.stamina}</p>
-        <p className="phrase">Inventory:</p>
-        <ul>
-          <li>Knife: {inventory.knife}</li>
-          <li>Sword: {inventory.sword}</li>
-          <li>Water Gun: {inventory.waterGun}</li>
-          <li>Gun: {inventory.gun}</li>
-        </ul>
+        {/*<p className="phrase">Inventory:</p>*/}
+        {
+          <ul className="phrase">
+            Inventory:
+            {Object.entries(player.inventory)
+              .filter(([itemName, itemQty]) => itemQty > 0)
+              .map(([itemName, itemQty]) => (
+                <li key={itemName}>
+                  {itemName}: {itemQty}
+                </li>
+              ))}
+          </ul>
+        }
       </div>
 
       <div className="links-container">

@@ -177,6 +177,8 @@ nav {
   width: 100vw;
 
   z-index: 100;
+
+  background-color: hsl(var(--hue), 100%, 26%, 85%);
 }
 
 nav .wrapper {

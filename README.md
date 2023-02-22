@@ -85,6 +85,11 @@ Trata-se de um desafio de nível jr. desenvolvido em react. A applicação rende
 Trata-se de um desafio de nível jr. desenvolvido em react. A aplicação trata-se de um formulário, onde todos os campos devem estar preenchidos para que o usuário possa efetuar o login. Além disso, a aplicação possui alguns filtros e mostra uma barra de progresso, que aumenta ou diminui conforme o formulário é preenchido.
 (Realizado com auxílio de curso)
 
+### react_challange_shopping_cart
+
+Trata-se de um desafio de nível jr. desenvolvido em react. A aplicação trata-se de uma simulação de um carrinho de compras, onde o usuário pode realizar todas as funções CRUD através de uma API chamada CruCrud.
+(Realizado com auxílio de curso)
+
 ### react_challange_tictactoe
 
 Trata-se de um desafio de nível pleno desenvolvido em react. Trata-se de um jogo da velha.

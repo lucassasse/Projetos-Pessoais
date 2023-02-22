@@ -18,10 +18,10 @@ export const Header = () => {
           <ul className="phrase">
             Inventory:
             {Object.entries(player.inventory)
-              .filter(([itemName, itemQty]) => itemQty > 0)
-              .map(([itemName, itemQty]) => (
+              .filter(([itemName, item]) => item.quantity > 0)
+              .map(([itemName, item]) => (
                 <li key={itemName}>
-                  {itemName}: {itemQty}
+                  {itemName}: {item.quantity}
                 </li>
               ))}
           </ul>

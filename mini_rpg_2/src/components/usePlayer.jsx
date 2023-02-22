@@ -15,10 +15,15 @@ export const PlayerProvider = ({ children }) => {
     strength: 5,
     money: 250,
     stamina: 5,
-    inventory: { knife: 0, sword: 0, waterGun: 0, gun: 0 }
+    inventory: {
+      knife: { quantity: 5, strength: 5 },
+      sword: { quantity: 1, strength: 20 },
+      waterGun: { quantity: 0, strength: 1 },
+      gun: { quantity: 2, strength: 50 }
+    }
   })
 
-  useEffect(() => {
+  let inventory = useEffect(() => {
     const localStoragePlayer = localStorage.getItem('player')
     if (localStoragePlayer) {
       setPlayer(JSON.parse(localStoragePlayer))

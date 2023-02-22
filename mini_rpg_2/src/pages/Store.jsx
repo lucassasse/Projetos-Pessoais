@@ -20,37 +20,61 @@ export const Store = () => {
       setPlayer({
         ...player,
         money: player.money - 5,
-        inventory: { ...player.inventory, knife: player.inventory.knife + 1 }
+        inventory: {
+          ...player.inventory,
+          knife: {
+            ...player.inventory.knife,
+            quantity: player.inventory.knife.quantity + 1
+          }
+        }
       })
     }
   }
 
   const buySword = () => {
-    if (player.money >= 15) {
+    if (player.money >= 10) {
       setPlayer({
         ...player,
-        money: player.money - 15,
-        inventory: { ...player.inventory, sword: player.inventory.sword + 1 }
+        money: player.money - 10,
+        inventory: {
+          ...player.inventory,
+          sword: {
+            ...player.inventory.sword,
+            quantity: player.inventory.sword.quantity + 1
+          }
+        }
       })
     }
   }
 
   const buyWaterGun = () => {
-    if (player.money >= 25) {
+    if (player.money >= 15) {
       setPlayer({
         ...player,
-        money: player.money - 25,
-        inventory: { ...player.inventory, waterGun: player.inventory.waterGun + 1 }
+        money: player.money - 15,
+        inventory: {
+          ...player.inventory,
+          waterGun: {
+            ...player.inventory.waterGun,
+            quantity: player.inventory.waterGun.quantity + 1
+          }
+        }
       })
     }
   }
 
   const buyGun = () => {
-    if (player.money >= 50) {
+    if (player.money >= 25) {
       setPlayer({
         ...player,
-        money: player.money - 50,
-        inventory: { ...player.inventory, gun: player.inventory.gun + 1 }
+        money: player.money - 25,
+        inventory: {
+          ...player.inventory,
+          gun: {
+            ...player.inventory.gun,
+            quantity: player.inventory.gun.quantity + 1
+          }
+        }
       })
     }
   }

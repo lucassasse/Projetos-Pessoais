@@ -16,10 +16,10 @@ export const PlayerProvider = ({ children }) => {
     money: 250,
     stamina: 5,
     inventory: {
-      knife: { quantity: 5, strength: 5 },
-      sword: { quantity: 1, strength: 20 },
-      waterGun: { quantity: 0, strength: 1 },
-      gun: { quantity: 2, strength: 50 }
+      knife: { quantity: 5, strength: 5, cost: 5 },
+      sword: { quantity: 1, strength: 20, cost: 10 },
+      waterGun: { quantity: 0, strength: 1, cost: 100 },
+      gun: { quantity: 2, strength: 50, cost: 20 }
     }
   })
 
@@ -27,7 +27,6 @@ export const PlayerProvider = ({ children }) => {
     const localStoragePlayer = localStorage.getItem('player')
     if (localStoragePlayer) {
       setPlayer(JSON.parse(localStoragePlayer))
-      console.log('Recuperando valor localStorage')
     }
   }, [])
 

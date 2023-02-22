@@ -19,7 +19,7 @@ export const Store = () => {
     if (player.money >= 5) {
       setPlayer({
         ...player,
-        money: player.money - 5,
+        money: player.money - parseInt(player.inventory.knife.cost),
         inventory: {
           ...player.inventory,
           knife: {
@@ -35,7 +35,7 @@ export const Store = () => {
     if (player.money >= 10) {
       setPlayer({
         ...player,
-        money: player.money - 10,
+        money: player.money - parseInt(player.inventory.sword.cost),
         inventory: {
           ...player.inventory,
           sword: {
@@ -48,10 +48,10 @@ export const Store = () => {
   }
 
   const buyWaterGun = () => {
-    if (player.money >= 15) {
+    if (player.money >= 100) {
       setPlayer({
         ...player,
-        money: player.money - 15,
+        money: player.money - parseInt(player.inventory.waterGun.cost),
         inventory: {
           ...player.inventory,
           waterGun: {
@@ -64,10 +64,10 @@ export const Store = () => {
   }
 
   const buyGun = () => {
-    if (player.money >= 25) {
+    if (player.money >= 20) {
       setPlayer({
         ...player,
-        money: player.money - 25,
+        money: player.money - parseInt(player.inventory.gun.cost),
         inventory: {
           ...player.inventory,
           gun: {

@@ -7,8 +7,8 @@ export const Forest = () => {
   const { player, setPlayer } = usePlayer()
 
   const [monster, setMonster] = useState({
-    strength: 10,
-    life: 10,
+    strength: 4,
+    life: 6,
     number: 10
   })
 
@@ -17,21 +17,30 @@ export const Forest = () => {
   }
 
   const battle = () => {
-    monster.life = 0
-    if (monster.life <= 0) {
-      alert('Parabéns, você matou o monstro. Um mais forte aparece!')
-      setPlayer({
-        ...player,
-        money: player.money + 10
-      })
+    player.life -= monster.strength
+    monster.life -= player.strength
+
+    if (player.life <= 0) {
+      alert('Lamento, a força do monstro foi maior que sua vida. Você morreu')
+      localStorage.clear()
+      window.location.reload()
+    } else if (monster.life <= 0) {
+      alert('Parabéns, você matou o monstro. Um mais forte apareceu!')
+      setPlayer({ ...player, money: player.money + 10 })
       setMonster({
         ...monster,
         strength: (monster.strength = randomNumber(monster.number)),
         life: (monster.life = randomNumber(monster.number)),
         number: monster.number * 1.5
       })
-      console.log({ ...monster })
+    } else {
+      setPlayer({ ...player, life: player.life })
+      setMonster({ ...monster, life: monster.life })
     }
+  }
+
+  const usingItemInventory = itemName => {
+    alert(itemName)
   }
 
   return (
@@ -43,6 +52,21 @@ export const Forest = () => {
         Batle: 10 gold
       </button>
       <p>Monster Life: {monster.life}</p>
+      {
+        <div>
+          {Object.entries(player.inventory)
+            .filter(([itemName, item]) => item.quantity > 0)
+            .map(([itemName, item]) => (
+              <button
+                className="btn"
+                onClick={() => usingItemInventory(itemName)}
+                key={itemName}
+              >
+                {itemName}: {item.quantity}
+              </button>
+            ))}
+        </div>
+      }
       <hr />
       <p>Sistema de batalhas em desenvolvimento!</p>
     </div>

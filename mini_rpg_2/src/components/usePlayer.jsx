@@ -23,7 +23,7 @@ export const PlayerProvider = ({ children }) => {
     }
   })
 
-  let inventory = useEffect(() => {
+  useEffect(() => {
     const localStoragePlayer = localStorage.getItem('player')
     if (localStoragePlayer) {
       setPlayer(JSON.parse(localStoragePlayer))

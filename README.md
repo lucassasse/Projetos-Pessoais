@@ -39,6 +39,12 @@ Trata-se de estudo e criação de aplicação de cadastro de pagamentos, com pos
 Projeto realizado para fixação de conhecimento sobre NodeJS e MySQL.
 (Realizado com auxílio de curso).
 
+### java_jogo_da_velha
+
+Trata-se de um jogo da velha, onde o usuário escolha se deseja jogar contra outra pessoa ou contra um robo simples.
+Projeto realizado com fins de prática de Java e POO.
+(Realizado sem auxílio de curso)
+
 ### jogo_acerte_a_palavra
 
 Trata-se de um jogo simples, onde o usuário digita 5 letras, 1 por 1, e o sistema aponta quais letras estão no local certo.

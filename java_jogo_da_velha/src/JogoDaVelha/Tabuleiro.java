@@ -12,6 +12,12 @@ public class Tabuleiro {
          System.out.println(tabuleiro[6] + " | " + tabuleiro[7] + " | " + tabuleiro[8]);
     }
     
+    public void limparTabuleiro() {
+    	for(int i = 0; i < 9; i++) {
+    		tabuleiro[i] = " ";
+    	}
+    }
+    
     public boolean verificaEmpate() {
     	for (int i = 0; i < 9; i++) {
             if (tabuleiro[i] == " ") {

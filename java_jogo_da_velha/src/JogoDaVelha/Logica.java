@@ -14,10 +14,26 @@ public class Logica {
 	private int posicao;
 	
 	public void jogo() {
-		System.out.println("Deseja jogar contra um amigo ou contra o ROBO? 1 = Amigo | 2 = ROBO");
-		escolha = lerTeclado.nextInt();
-		vez = jogador.jogadorVez();
-		Jogada();
+	    while (true) {
+	        System.out.println("Deseja jogar contra um amigo ou contra o ROBO? 1 = Amigo | 2 = ROBO | 3 = Sair");
+	        tabuleiro.limparTabuleiro();
+	        if (lerTeclado.hasNextInt()) {
+	            escolha = lerTeclado.nextInt();
+	            if (escolha == 1 || escolha == 2) {
+	                vez = jogador.jogadorVez();
+	                Jogada();
+	            } 
+	            else if(escolha == 3) {
+	            	return;
+	            } 
+	            else {
+	                System.out.println("Por favor, digite uma opção válida!");
+	            }
+	        } else {
+	            System.out.println("Por favor, digite um número inteiro!");
+	            lerTeclado.nextLine();
+	        }
+	    }
 	}
 	
 	private void Jogada() {
@@ -40,14 +56,14 @@ public class Logica {
 	
 	private void lerTeclado() {
 		System.out.println("Qual posição do tabuleiro você deseja jogar?");
-		posicao = lerTeclado.nextInt();
+		posicao = lerTeclado.nextInt() - 1;
 		verificarPosicao();
 	}
 	
 	private void verificarPosicao() {
 		if(posicao < 0 || posicao > 8 || tabuleiro.tabuleiro[posicao] != " ") {
 			System.out.println("Posição inválida. Tente novamente.");
-			lerTeclado();
+			Jogada();
 		}
 		else {
 			tabuleiro.tabuleiro[posicao] = vez;

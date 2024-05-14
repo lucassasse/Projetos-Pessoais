@@ -68,7 +68,7 @@ const handleLogin = (e) => {
     login.style.display = 'none';
     chat.style.display = 'flex';
 
-    ws = new WebSocket('ws://localhost:8080');
+    ws = new WebSocket('wss://socket-chat-ytst.onrender.com');
     ws.onmessage = processMessage;
 };
 

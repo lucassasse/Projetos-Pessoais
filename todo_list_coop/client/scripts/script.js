@@ -1,4 +1,10 @@
-
+const socket = new WebSocket('ws://localhost:3000');
+    
+function enviarValor() {
+    const valor = document.getElementById('valorInput').value;
+    const message = { type: 'valor', value: valor };
+    socket.send(JSON.stringify(message));
+}
 
 /*
 const login = document.querySelector('.login');
